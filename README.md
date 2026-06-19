@@ -1,8 +1,13 @@
-# ashes331.github.io
+<div align="center">
 
-> 개인 포트폴리오 대문 홈페이지
+# 🌐 ashes331.github.io
 
-🔗 **[ashes331.github.io](https://ashes331.github.io)**
+**개인 포트폴리오 대문 홈페이지**
+
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-4f52c8?style=flat-square&logo=github)](https://ashes331.github.io)
+[![GitHub](https://img.shields.io/badge/GitHub-ashes331-181717?style=flat-square&logo=github)](https://github.com/ashes331)
+
+</div>
 
 ---
 
