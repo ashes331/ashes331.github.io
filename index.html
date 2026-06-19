@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ashes331</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:         #f8f9fc;
+      --card:       #ffffff;
+      --border:     #e2e6f0;
+      --border2:    #c7cde0;
+      --accent:     #4f52c8;
+      --accent-lt:  #7b7ef0;
+      --accent-bg:  #eef0ff;
+      --text:       #1a1d2e;
+      --muted:      #6b7280;
+      --dim:        #9ca3af;
+      --sb-slim:    56px;
+      --sb-wide:    260px;
+      --transition: 0.28s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* ══════════════════════════════
+       SIDEBAR
+    ══════════════════════════════ */
+    .sidebar {
+      width: var(--sb-slim);
+      min-height: 100vh;
+      background: var(--card);
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow: hidden;
+      flex-shrink: 0;
+      transition: width var(--transition);
+      z-index: 200;
+    }
+
+    .sidebar.expanded { width: var(--sb-wide); align-items: stretch; }
+
+    /* ── 토글 버튼 ── */
+    .sb-toggle {
+      width: 100%;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: none;
+      border: none;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      color: var(--muted);
+      transition: color 0.18s, background 0.18s;
+      flex-shrink: 0;
+    }
+
+    .sidebar.expanded .sb-toggle { justify-content: flex-end; padding-right: 1rem; }
+    .sb-toggle:hover { background: var(--accent-bg); color: var(--accent); }
+
+    .sb-toggle svg { transition: transform var(--transition); }
+    .sidebar.expanded .sb-toggle svg { transform: scaleX(-1); }
+
+    /* ── 프로필 (expanded only) ── */
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 1.4rem 1.2rem 1.2rem;
+      border-bottom: 1px solid var(--border);
+      overflow: hidden;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s 0s;
+      width: var(--sb-wide);
+      flex-shrink: 0;
+    }
+
+    .sidebar.expanded .profile {
+      opacity: 1;
+      pointer-events: auto;
+      transition: opacity 0.25s 0.1s;
+    }
+
+    .avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-lt) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.75rem;
+      flex-shrink: 0;
+    }
+
+    .profile-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.02em;
+      margin-bottom: 0.2rem;
+      white-space: nowrap;
+    }
+
+    .profile-role {
+      font-size: 0.72rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .profile-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      justify-content: center;
+      margin-top: 0.75rem;
+    }
+
+    .badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.62rem;
+      padding: 0.18rem 0.5rem;
+      border-radius: 999px;
+      background: var(--accent-bg);
+      color: var(--accent);
+      border: 1px solid rgba(79,82,200,0.18);
+      white-space: nowrap;
+    }
+
+    /* ── NAV ITEMS (공통) ── */
+    .nav-section {
+      width: 100%;
+      flex: 1;
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding: 0.75rem 0;
+    }
+
+    .nav-section-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      color: var(--dim);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 0.5rem 1rem 0.3rem;
+      white-space: nowrap;
+      overflow: hidden;
+      opacity: 0;
+      transition: opacity 0.15s;
+    }
+
+    .sidebar.expanded .nav-section-label { opacity: 1; transition: opacity 0.2s 0.12s; }
+
+    .nav-links { list-style: none; }
+
+    .nav-links li a {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      height: 44px;
+      padding: 0 0.75rem;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: background 0.16s, color 0.16s;
+      white-space: nowrap;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* slim 모드: 아이콘 중앙 정렬 */
+    .sidebar:not(.expanded) .nav-links li a {
+      justify-content: center;
+      padding: 0;
+      width: var(--sb-slim);
+      gap: 0;
+    }
+
+    .sidebar:not(.expanded) .nav-links li a .nav-icon {
+      width: var(--sb-slim);
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-links li a:hover,
+    .nav-links li a.active {
+      background: var(--accent-bg);
+      color: var(--accent);
+    }
+
+    .nav-icon {
+      font-size: 1.05rem;
+      flex-shrink: 0;
+      text-align: center;
+    }
+
+    .nav-label {
+      opacity: 0;
+      transition: opacity 0.15s;
+      pointer-events: none;
+    }
+
+    .sidebar.expanded .nav-label {
+      opacity: 1;
+      transition: opacity 0.22s 0.1s;
+    }
+
+    /* tooltip (slim 모드) */
+    .sidebar:not(.expanded) .nav-links li a::after {
+      content: attr(data-tip);
+      position: absolute;
+      left: calc(var(--sb-slim) + 8px);
+      background: var(--text);
+      color: #fff;
+      font-size: 0.75rem;
+      padding: 0.3rem 0.65rem;
+      border-radius: 6px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.15s;
+      z-index: 300;
+    }
+
+    .sidebar:not(.expanded) .nav-links li a:hover::after { opacity: 1; }
+
+    /* ── SIDEBAR FOOTER ── */
+    .sb-footer {
+      width: 100%;
+      border-top: 1px solid var(--border);
+      padding: 0.6rem 0;
+      flex-shrink: 0;
+    }
+
+    .sb-footer a {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      height: 44px;
+      padding: 0 0.75rem;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 500;
+      white-space: nowrap;
+      overflow: hidden;
+      transition: background 0.16s, color 0.16s;
+    }
+
+    .sidebar:not(.expanded) .sb-footer a {
+      justify-content: center;
+      padding: 0;
+      width: var(--sb-slim);
+      gap: 0;
+    }
+
+    .sidebar:not(.expanded) .sb-footer a .nav-icon {
+      width: var(--sb-slim);
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .sb-footer a:hover { background: var(--accent-bg); color: var(--accent); }
+
+    .sb-footer .nav-label {
+      opacity: 0;
+      transition: opacity 0.15s;
+    }
+    .sidebar.expanded .sb-footer .nav-label {
+      opacity: 1;
+      transition: opacity 0.22s 0.1s;
+    }
+
+    .sidebar:not(.expanded) .sb-footer a::after {
+      content: attr(data-tip);
+      position: absolute;
+      left: calc(var(--sb-slim) + 8px);
+      background: var(--text);
+      color: #fff;
+      font-size: 0.75rem;
+      padding: 0.3rem 0.65rem;
+      border-radius: 6px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.15s;
+      z-index: 300;
+    }
+    .sidebar:not(.expanded) .sb-footer a { position: relative; }
+    .sidebar:not(.expanded) .sb-footer a:hover::after { opacity: 1; }
+
+    /* ══════════════════════════════
+       MAIN
+    ══════════════════════════════ */
+    .main {
+      flex: 1;
+      min-width: 0;
+      padding: 3.5rem 3.5rem 4rem;
+      max-width: 860px;
+    }
+
+    .section { margin-bottom: 4.5rem; }
+
+    .section-eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--accent);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      color: var(--text);
+      margin-bottom: 1.8rem;
+    }
+
+    /* ── HERO ── */
+    .hero-greeting {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+    }
+
+    .hero-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: var(--text);
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-title .accent {
+      background: linear-gradient(90deg, var(--accent), var(--accent-lt));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-desc {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 520px;
+      line-height: 1.75;
+      margin-bottom: 2rem;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin-bottom: 2.2rem;
+    }
+
+    .tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      padding: 0.3rem 0.8rem;
+      border-radius: 999px;
+      border: 1px solid var(--border2);
+      color: var(--muted);
+      background: var(--card);
+    }
+
+    .hero-cta { display: flex; gap: 0.85rem; flex-wrap: wrap; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.7rem 1.4rem;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+      cursor: pointer;
+      border: none;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 2px 8px rgba(79,82,200,0.25);
+    }
+    .btn-primary:hover {
+      background: var(--accent-lt);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(79,82,200,0.3);
+    }
+
+    .btn-ghost {
+      background: var(--card);
+      color: var(--muted);
+      border: 1px solid var(--border2);
+    }
+    .btn-ghost:hover { color: var(--text); border-color: var(--accent); transform: translateY(-2px); }
+
+    /* ── ABOUT ── */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .info-card {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      padding: 1rem 1.1rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      transition: border-color 0.2s;
+    }
+    .info-card:hover { border-color: var(--border2); }
+
+    .info-icon-wrap {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: var(--accent-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .info-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.62rem;
+      color: var(--dim);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .info-value {
+      font-size: 0.875rem;
+      color: var(--text);
+      font-weight: 500;
+    }
+    .info-value a { color: var(--accent); text-decoration: none; }
+    .info-value a:hover { text-decoration: underline; }
+
+    /* ── SKILLS ── */
+    .skills-grid { display: flex; flex-wrap: wrap; gap: 0.55rem; }
+
+    .skill-chip {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.45rem 0.9rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 7px;
+      font-size: 0.82rem;
+      color: var(--muted);
+      font-weight: 500;
+      transition: all 0.18s;
+    }
+    .skill-chip:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-bg); }
+
+    .skill-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    /* ── PROJECTS ── */
+    .projects-grid { display: grid; gap: 1rem; }
+    .two-col { grid-template-columns: 1fr 1fr; }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      padding: 1.5rem 1.6rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.22s;
+    }
+    .project-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 28px rgba(79,82,200,0.1);
+    }
+
+    .project-card.featured {
+      border-color: rgba(79,82,200,0.3);
+      background: linear-gradient(135deg, rgba(79,82,200,0.04) 0%, #fff 60%);
+    }
+    .project-card.featured:hover { box-shadow: 0 10px 36px rgba(79,82,200,0.15); }
+
+    .card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 0.8rem;
+    }
+
+    .card-emoji { font-size: 1.6rem; }
+
+    .card-arrow {
+      font-size: 1rem;
+      color: var(--dim);
+      transition: all 0.2s;
+    }
+    .project-card:hover .card-arrow { color: var(--accent); transform: translate(3px, -3px); }
+
+    .card-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.4rem;
+      letter-spacing: -0.015em;
+    }
+    .featured .card-title { font-size: 1.2rem; }
+
+    .card-desc {
+      font-size: 0.855rem;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .card-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1rem; }
+
+    .card-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      padding: 0.18rem 0.55rem;
+      border-radius: 4px;
+      background: var(--accent-bg);
+      color: var(--accent);
+      border: 1px solid rgba(79,82,200,0.15);
+    }
+
+    .placeholder { opacity: 0.4; cursor: default; pointer-events: none; }
+
+    /* ── DIVIDER / FOOTER ── */
+    .divider { border: none; border-top: 1px solid var(--border); margin-bottom: 4.5rem; }
+
+    footer {
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--dim);
+    }
+
+    /* ── FADE IN ── */
+    .fade-in { opacity: 0; transform: translateY(16px); transition: opacity 0.55s ease, transform 0.55s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 640px) {
+      .sidebar { display: none; }
+      .main { padding: 2rem 1.25rem 3rem; }
+      .about-grid, .two-col { grid-template-columns: 1fr; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════ SIDEBAR ══════════ -->
+<aside class="sidebar" id="sidebar">
+
+  <!-- 토글 버튼 -->
+  <button class="sb-toggle" id="sb-toggle" aria-label="사이드바 펼치기/접기">
+    <!-- panel-left 아이콘 -->
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="3" width="18" height="18" rx="2"/>
+      <path d="M9 3v18"/>
+    </svg>
+  </button>
+
+  <!-- 프로필 (expanded) -->
+  <div class="profile">
+    <div class="avatar">ash</div>
+    <div class="profile-name">ashes331</div>
+    <div class="profile-role">인공지능소프트웨어학과<br>동양미래대학교</div>
+    <div class="profile-badges">
+      <span class="badge">ML / DL</span>
+      <span class="badge">NLP</span>
+      <span class="badge">Vanilla JS</span>
+    </div>
+  </div>
+
+  <!-- 네비게이션 -->
+  <nav class="nav-section">
+    <p class="nav-section-label">Navigation</p>
+    <ul class="nav-links">
+      <li>
+        <a href="#hero" class="active" data-tip="Home">
+          <span class="nav-icon">🏠</span>
+          <span class="nav-label">Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="#about" data-tip="About">
+          <span class="nav-icon">👤</span>
+          <span class="nav-label">About</span>
+        </a>
+      </li>
+      <li>
+        <a href="#skills" data-tip="Skills">
+          <span class="nav-icon">🛠</span>
+          <span class="nav-label">Skills</span>
+        </a>
+      </li>
+      <li>
+        <a href="#projects" data-tip="Projects">
+          <span class="nav-icon">📁</span>
+          <span class="nav-label">Projects</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- 하단: GitHub만 -->
+  <div class="sb-footer">
+    <a href="https://github.com/ashes331" target="_blank" rel="noopener" data-tip="GitHub">
+      <span class="nav-icon" style="width:20px;text-align:center;flex-shrink:0;">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+      </span>
+      <span class="nav-label">github.com/ashes331</span>
+    </a>
+  </div>
+
+</aside>
+
+<!-- ══════════ MAIN ══════════ -->
+<main class="main">
+
+  <!-- HERO -->
+  <section id="hero" class="section">
+    <p class="hero-greeting fade-in">// Hello, world</p>
+    <h1 class="hero-title fade-in">안녕하세요,<br><span class="accent">ashes331</span>입니다.</h1>
+    <p class="hero-desc fade-in">ML/DL, NLP, 알고리즘을 공부하며 직접 만들고 실험하는 걸 즐깁니다.</p>
+    <div class="hero-tags fade-in">
+      <span class="tag">Machine Learning</span>
+      <span class="tag">Deep Learning</span>
+      <span class="tag">NLP</span>
+      <span class="tag">Python</span>
+      <span class="tag">Vanilla JS</span>
+    </div>
+    <div class="hero-cta fade-in">
+      <a class="btn btn-primary" href="#projects">프로젝트 보기</a>
+      <a class="btn btn-ghost" href="https://github.com/ashes331" target="_blank" rel="noopener">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        GitHub
+      </a>
+    </div>
+  </section>
+
+  <hr class="divider fade-in">
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <p class="section-eyebrow fade-in">About</p>
+    <h2 class="section-title fade-in">나에 대해서</h2>
+    <div class="about-grid fade-in">
+      <div class="info-card">
+        <div class="info-icon-wrap">🏫</div>
+        <div>
+          <div class="info-label">School</div>
+          <div class="info-value">동양미래대학교</div>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon-wrap">📚</div>
+        <div>
+          <div class="info-label">Major</div>
+          <div class="info-value">인공지능소프트웨어학과</div>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon-wrap">🔬</div>
+        <div>
+          <div class="info-label">Interests</div>
+          <div class="info-value">ML / DL / NLP / Algorithm</div>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon-wrap">🐙</div>
+        <div>
+          <div class="info-label">GitHub</div>
+          <div class="info-value"><a href="https://github.com/ashes331" target="_blank" rel="noopener">github.com/ashes331</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider fade-in">
+
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <p class="section-eyebrow fade-in">Skills</p>
+    <h2 class="section-title fade-in">기술 스택</h2>
+    <div class="skills-grid fade-in">
+      <div class="skill-chip"><span class="skill-dot"></span>Python</div>
+      <div class="skill-chip"><span class="skill-dot"></span>JavaScript</div>
+      <div class="skill-chip"><span class="skill-dot"></span>HTML / CSS</div>
+      <div class="skill-chip"><span class="skill-dot"></span>PyTorch</div>
+      <div class="skill-chip"><span class="skill-dot"></span>TensorFlow</div>
+      <div class="skill-chip"><span class="skill-dot"></span>NumPy</div>
+      <div class="skill-chip"><span class="skill-dot"></span>Pandas</div>
+      <div class="skill-chip"><span class="skill-dot"></span>Canvas API</div>
+      <div class="skill-chip"><span class="skill-dot"></span>Web Audio API</div>
+      <div class="skill-chip"><span class="skill-dot"></span>Git / GitHub</div>
+      <div class="skill-chip"><span class="skill-dot"></span>알고리즘</div>
+      <div class="skill-chip"><span class="skill-dot"></span>강화학습</div>
+    </div>
+  </section>
+
+  <hr class="divider fade-in">
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <p class="section-eyebrow fade-in">Projects</p>
+    <h2 class="section-title fade-in">만든 것들</h2>
+    <div class="projects-grid fade-in">
+      <a class="project-card featured" href="https://ashes331.github.io/Special-Playground/" target="_blank" rel="noopener">
+        <div class="card-top">
+          <span class="card-emoji">🎮</span>
+          <span class="card-arrow">↗</span>
+        </div>
+        <div class="card-title">Special Playground</div>
+        <p class="card-desc">게임, 도구, 알고리즘 시각화까지 — 직접 만들고 실험하는 인터랙티브 프로젝트 모음집. Tetris, Neural Network Playground, Pathfinding Visualizer, RL Playground 등 다수 포함.</p>
+        <div class="card-tags">
+          <span class="card-tag">Vanilla JS</span>
+          <span class="card-tag">Canvas API</span>
+          <span class="card-tag">ML / RL</span>
+          <span class="card-tag">Games</span>
+          <span class="card-tag">Tools</span>
+        </div>
+      </a>
+    </div>
+    <div class="projects-grid two-col" style="margin-top:1rem;">
+      <div class="project-card placeholder">
+        <div class="card-top"><span class="card-emoji">🔬</span></div>
+        <div class="card-title">Coming Soon</div>
+        <p class="card-desc">다음 프로젝트를 준비 중입니다.</p>
+        <div class="card-tags"><span class="card-tag">TBD</span></div>
+      </div>
+      <div class="project-card placeholder">
+        <div class="card-top"><span class="card-emoji">📄</span></div>
+        <div class="card-title">Coming Soon</div>
+        <p class="card-desc">더 많은 것들이 추가될 예정입니다.</p>
+        <div class="card-tags"><span class="card-tag">TBD</span></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="fade-in">
+    <p>© 2025 ashes331 · Built with HTML / CSS / JS</p>
+  </footer>
+
+</main>
+
+<script>
+  /* ── 사이드바 토글 ── */
+  const sidebar = document.getElementById('sidebar');
+  const toggle  = document.getElementById('sb-toggle');
+
+  // localStorage로 상태 유지
+  if (localStorage.getItem('sb-expanded') === 'true') {
+    sidebar.classList.add('expanded');
+  }
+
+  toggle.addEventListener('click', () => {
+    sidebar.classList.toggle('expanded');
+    localStorage.setItem('sb-expanded', sidebar.classList.contains('expanded'));
+  });
+
+  /* ── 스크롤 fade-in ── */
+  const fadeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); fadeObserver.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
+
+  /* ── nav active highlight ── */
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+
+  const secObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        navLinks.forEach(a => a.classList.remove('active'));
+        const active = document.querySelector(`.nav-links a[href="#${e.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { threshold: 0.4 });
+
+  sections.forEach(s => secObserver.observe(s));
+</script>
+</body>
+</html>
