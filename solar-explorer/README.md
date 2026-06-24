@@ -2,6 +2,8 @@
 [![Three.js](https://img.shields.io/badge/Three.js-r128-black?style=flat-square&logo=three.js)](https://threejs.org/)
 [![WebGL](https://img.shields.io/badge/WebGL-2.0-red?style=flat-square&logo=khronos)](https://www.khronos.org/webgl/)
 [![Web Audio API](https://img.shields.io/badge/Web%20Audio%20API-Synthesized-blue?style=flat-square)](https://developer.mozilla.org/ko/docs/Web/API/Web_Audio_API)
+
+
 외부 에셋 이미지 다운로드 차단(CORS)이나 소리 리소스 설치의 제약 없이, 웹 표준 브라우저 기술만을 사용하여 구현한 **고정밀 3D 태양계 시뮬레이터**입니다.
 ---
 ## 🚀 기술적 핵심 아키텍처 및 구현 기법
