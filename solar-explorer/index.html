@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>태양계 탐험기 3D | Solar System Explorer 3D</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  
+  <!-- 3D 스타일시트 외부 파일 분리 연동 -->
+  <link rel="stylesheet" href="src/style.css?v=5">
+
+  <!-- Three.js (r128) & OrbitControls CDN 라이브러리 연동 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+
+  <!-- Base64 NASA 실제 텍스처 데이터셋 우선 로드 (CORS 및 오프라인 대비) -->
+  <script src="src/textures_data.js?v=5"></script>
+
+  <!-- 메인 3D 애플리케이션 외부 스크립트 비동기 연동 -->
+  <script src="src/app.js?v=5" defer></script>
+</head>
+<body>
+
+<!-- 로딩 화면 -->
+<div id="loading-overlay">
+  <div class="loader"></div>
+  <div class="loading-text" id="loading-text">우주 지도 및 행성 텍스처 로딩 중...</div>
+</div>
+
+<!-- 인트로 안내 모달 -->
+<div id="intro" style="display: none;">
+  <p class="intro-badge">✦ 3D Interactive Simulation ✦</p>
+  <h1 class="intro-title">태양계 탐험기 3D</h1>
+  <p class="intro-sub">Solar System Explorer 3D</p>
+  <div class="intro-hints">
+    <div class="hint-item">
+      <div class="hint-icon">🖱️</div>
+      <span>휠 스크롤로 확대/축소</span>
+    </div>
+    <div class="hint-item">
+      <div class="hint-icon">✋</div>
+      <span>좌클릭 드래그로 시점 회전</span>
+    </div>
+    <div class="hint-item">
+      <div class="hint-icon">👆</div>
+      <span>클릭으로 행성 정보 탐색</span>
+    </div>
+  </div>
+  <button class="start-btn" id="start-btn">탐험 시작하기 →</button>
+</div>
+
+<!-- WebGL 3D 렌더링 컨테이너 및 2D 유성 레이어 -->
+<div id="webgl-container"></div>
+<canvas id="fx-canvas"></canvas>
+
+<!-- 좌상단 HUD 영역 -->
+<div id="hud">
+  <div class="hud-region" id="hud-region">오르트 구름</div>
+  <div class="hud-name" id="hud-name">OORT CLOUD</div>
+  <div class="hud-dist" id="hud-dist"></div>
+</div>
+
+<!-- 하단 중앙 배율 자 (Scale Bar) -->
+<div id="scalebar">
+  <div class="scalebar-line"></div>
+  <div class="scalebar-label" id="scale-label">—</div>
+</div>
+
+<!-- 시간 조작 컨트롤 패널 (Time Control Console) -->
+<div id="time-controller">
+  <button id="time-play-btn" class="time-btn" title="재생/일시정지">⏸</button>
+  <div class="time-slider-container">
+    <span class="time-slider-label">공전 속도</span>
+    <input type="range" id="time-speed-slider" min="0.2" max="5.0" step="0.1" value="1.0">
+    <span id="time-speed-val" class="time-speed-val">1.0x</span>
+  </div>
+  <div class="time-divider"></div>
+  <div class="date-container">
+    <input type="date" id="date-picker" class="date-picker">
+    <span id="date-display" class="date-display">2000년 01월 01일</span>
+  </div>
+</div>
+
+<!-- 사운드 컨트롤 버튼 -->
+<button id="sound-toggle-btn" class="sound-toggle-btn" title="배경음악 및 효과음 켜기/끄기">
+  <span id="sound-icon">🔊</span>
+</button>
+
+
+
+<!-- 좌하단 조작 안내 도움말 -->
+<div id="controls">
+  <div class="ctrl"><span class="ctrl-key">좌클릭+드래그</span>카메라 회전</div>
+  <div class="ctrl"><span class="ctrl-key">우클릭+드래그</span>화면 평면 이동</div>
+  <div class="ctrl"><span class="ctrl-key">휠 스크롤</span>줌인/아웃</div>
+  <div class="ctrl"><span class="ctrl-key">천체 클릭</span>포커스 맞추기</div>
+  <div class="ctrl"><span class="ctrl-key">R</span>우주 전체보기 리셋</div>
+</div>
+
+<!-- 우하단 세로형 줌 인디케이터 바 -->
+<div id="zoom-bar">
+  <div class="zoom-label">ZOOM</div>
+  <div class="zoom-track">
+    <div class="zoom-thumb" id="zoom-thumb"></div>
+  </div>
+</div>
+
+<!-- 우측 행성 정보 상세 글래스 패널 및 좌측 위성 정보 패널 -->
+<div id="satellites-panel">
+  <div class="sat-panel-header">
+    <div class="sat-panel-title">위성 시스템</div>
+    <div class="sat-panel-subtitle">SATELLITE SYSTEM</div>
+  </div>
+  <div class="satellites-list" id="satellites-list">
+    <!-- 위성 카드가 동적으로 주입됩니다 -->
+  </div>
+  <div class="other-sats-section" id="other-sats-section">
+    <!-- 그 외 위성 텍스트 목록이 동적으로 주입됩니다 -->
+  </div>
+</div>
+
+<div id="info-panel">
+  <button class="panel-close" id="panel-close">✕</button>
+  <div class="panel-header">
+    <!-- 정보 패널 내부 미니 3D 행성 구체 렌더링 영역 -->
+    <div id="panel-globe-container"></div>
+    <div class="panel-names">
+      <div class="panel-name-ko" id="panel-name-ko"></div>
+      <div class="panel-name-en" id="panel-name-en"></div>
+      <div class="panel-type" id="panel-type"></div>
+    </div>
+  </div>
+  <div class="panel-stats" id="panel-stats"></div>
+  <div class="panel-desc" id="panel-desc"></div>
+  <div class="facts-title">주요 사실</div>
+  <div id="panel-facts"></div>
+</div>
+
+<!-- 천체 오버레이 마우스 툴팁 -->
+<div id="tooltip"></div>
+
+</body>
+</html>

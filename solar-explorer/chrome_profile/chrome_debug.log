@@ -1,0 +1,628 @@
+[12636:27236:0624/174858.523:VERBOSE1:components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc:122] DM token = empty
+[12636:27236:0624/174858.523:VERBOSE1:components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc:128] Enrollment token = 
+[12636:27236:0624/174858.523:VERBOSE1:components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc:129] Client ID = 5832c22a-c159-453c-978c-42ef6a11836b
+[12636:27236:0624/174858.525:VERBOSE1:components\variations\service\variations_field_trial_creator.cc:77] VariationsSeedUsage:12
+[12636:27236:0624/174858.525:VERBOSE1:components\variations\service\variations_field_trial_creator.cc:374] VariationsSetupComplete
+[12636:27236:0624/174858.554:VERBOSE1:chrome\browser\media\webrtc\webrtc_event_log_manager.cc:126] WebRTC remote-bound event logging enabled.
+[12636:27236:0624/174858.555:VERBOSE1:components\proxy_config\pref_proxy_config_tracker_impl.cc:462] 0x565c02310340: set chrome proxy config service to 0x565c0236c380
+[12636:27236:0624/174858.560:VERBOSE1:components\device_event_log\device_event_log_impl.cc:203] [17:48:58.560] Display: EVENT: screen_win.cc:1092 Displays updated, count: 1
+[12636:27236:0624/174858.563:VERBOSE1:components\device_event_log\device_event_log_impl.cc:203] [17:48:58.563] Display: EVENT: screen_win.cc:1094 Display[1] bounds=[0,0 800x600], workarea=[0,0 800x600], scale=1, rotation=0, panel_rotation=0 external detected
+[12636:27236:0624/174858.572:VERBOSE1:components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc:211] Starting CBCM Controller Initialization
+[12636:27236:0624/174858.572:INFO:components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc:239] No machine level policy manager exists.
+[12636:27236:0624/174858.572:VERBOSE1:chrome\installer\util\install_util.cc:218] Existing Chrome version found: 149.0.7827.155
+[12636:27236:0624/174858.572:VERBOSE1:chrome\browser\enterprise\platform_auth\platform_auth_policy_observer.cc:108] PlatformAuthProviderManager enabled: 0
+[12636:27236:0624/174858.574:VERBOSE1:components\policy\core\common\cloud\user_cloud_policy_store.cc:130] [policy_type=google/chrome/user] Initiating immediate policy load from disk
+[12636:27236:0624/174858.574:VERBOSE1:components\policy\core\common\cloud\user_cloud_policy_store.cc:233] [policy_type=google/chrome/user] No policy found on disk
+[12636:27236:0624/174858.574:VERBOSE1:components\policy\core\common\cloud\user_cloud_policy_store.cc:130] [policy_type=google/extension-install-cloud-policy/chrome/user] Initiating immediate policy load from disk
+[12636:27236:0624/174858.574:VERBOSE1:components\policy\core\common\cloud\user_cloud_policy_store.cc:233] [policy_type=google/extension-install-cloud-policy/chrome/user] No policy found on disk
+[12636:27236:0624/174858.587:VERBOSE1:components\proxy_config\pref_proxy_config_tracker_impl.cc:462] 0x565c02314440: set chrome proxy config service to 0x565c0236ebc0
+[12636:27236:0624/174858.587:VERBOSE1:components\signin\internal\identity_manager\mutable_profile_oauth2_token_service_delegate.cc:353] MutablePO2TS::MutablePO2TS
+[12636:27236:0624/174858.589:VERBOSE1:google_apis\gaia\gaia_auth_util.cc:53] Canonicalized @gmail.com to @gmail.com
+[12636:27236:0624/174858.589:VERBOSE1:google_apis\gaia\gaia_auth_util.cc:53] Canonicalized @gmail.com to @gmail.com
+[12636:27236:0624/174858.589:VERBOSE1:components\signin\core\browser\account_reconcilor.cc:150] AccountReconcilor::AccountReconcilor
+[12636:27236:0624/174858.589:VERBOSE1:components\signin\core\browser\account_reconcilor.cc:180] AccountReconcilor::Initialize
+[12636:27236:0624/174858.589:VERBOSE1:components\signin\core\browser\account_reconcilor.cc:231] AccountReconcilor::RegisterWithContentSettings
+[12636:27236:0624/174858.589:VERBOSE1:components\signin\core\browser\account_reconcilor.cc:254] AccountReconcilor::RegisterWithIdentityManager
+[12636:11996:0624/174858.589:VERBOSE1:net\disk_cache\simple\simple_index_file.cc:625] Simple Cache Index is being restored from disk.
+[12636:27236:0624/174858.591:VERBOSE1:components\proxy_config\pref_proxy_config_tracker_impl.cc:462] 0x565c02316e80: set chrome proxy config service to 0x565c02372580
+[12636:27236:0624/174858.592:VERBOSE1:chrome\browser\permissions\prediction_service\prediction_model_handler_provider_factory.cc:61] [PermissionsAI]: PredictionModelHandlerProviderFactory::BuildServiceInstanceForBrowserContext
+[12636:27236:0624/174858.592:VERBOSE1:chrome\browser\permissions\prediction_service\prediction_model_handler_provider_factory.cc:98] [PermissionsAI]: PredictionModelHandlerProviderFactory::BuildServiceInstanceForBrowserContext PermissionsAIv4 not enabled, passage embedder not setup.
+[12636:27236:0624/174858.592:VERBOSE1:chrome\browser\permissions\prediction_service\prediction_model_handler_provider.cc:55] [PermissionsAI] PredictionModelHandlerProvider ctor passage_embedder available: false
+[12636:27236:0624/174858.592:VERBOSE1:chrome\browser\permissions\prediction_service\prediction_model_handler_provider.cc:58] [PermissionsAI] PredictionModelHandlerProvider ctor optimization_guide available: true
+[12636:27236:0624/174858.593:VERBOSE1:components\signin\internal\identity_manager\mutable_profile_oauth2_token_service_delegate.cc:443] MutablePO2TS::RefreshTokenIsAvailable
+[12636:3992:0624/174858.593:VERBOSE1:components\signin\public\webdata\token_service_table.cc:259] Loaded tokens: result = 3 ; number of tokens loaded = 0
+[12636:27236:0624/174858.594:VERBOSE1:components\signin\internal\identity_manager\mutable_profile_oauth2_token_service_delegate.cc:443] MutablePO2TS::RefreshTokenIsAvailable
+[12636:27236:0624/174858.599:VERBOSE1:extensions\browser\extension_registrar.cc:547] AddComponentExtension 웹 스토어
+[12636:27236:0624/174858.599:VERBOSE1:extensions\browser\extension_registrar.cc:549] Component extension 웹 스토어 (ahfgeienlihckogmohjhadlkjgocpleb) installing/upgrading from '' to 0.2
+[12636:27236:0624/174858.600:VERBOSE1:extensions\browser\extension_registrar.cc:547] AddComponentExtension Chrome PDF Viewer
+[12636:27236:0624/174858.600:VERBOSE1:extensions\browser\extension_registrar.cc:549] Component extension Chrome PDF Viewer (mhjfbmdgcfjbbpaeojofohoefgiehjai) installing/upgrading from '' to 1
+[12636:27236:0624/174858.601:VERBOSE1:extensions\browser\extension_registrar.cc:547] AddComponentExtension Google Hangouts
+[12636:27236:0624/174858.601:VERBOSE1:extensions\browser\extension_registrar.cc:549] Component extension Google Hangouts (nkeimhogjdpnpccoofpliimaahmaaome) installing/upgrading from '' to 1.3.26
+[12636:27236:0624/174858.602:VERBOSE1:extensions\browser\extension_registrar.cc:547] AddComponentExtension Google Network Speech
+[12636:27236:0624/174858.602:VERBOSE1:extensions\browser\extension_registrar.cc:549] Component extension Google Network Speech (fignfifoniblkonapihmkfakmlgkbkcf) installing/upgrading from '' to 1.0
+[12636:27236:0624/174858.603:VERBOSE1:components\signin\internal\identity_manager\mutable_profile_oauth2_token_service_delegate.cc:443] MutablePO2TS::RefreshTokenIsAvailable
+[12636:27236:0624/174858.603:VERBOSE1:components\signin\internal\identity_manager\mutable_profile_oauth2_token_service_delegate.cc:443] MutablePO2TS::RefreshTokenIsAvailable
+[12636:7332:0624/174858.605:VERBOSE1:components\component_updater\component_installer.cc:477] StartRegistration for Chrome Improved Recovery
+[12636:23848:0624/174858.605:VERBOSE1:components\component_updater\component_installer.cc:477] StartRegistration for Widevine Content Decryption Module
+[12636:27236:0624/174858.605:VERBOSE1:chrome\browser\component_updater\trust_token_key_commitments_component_installer.cc:22] Registering Trust Token Key Commitments component.
+[12636:29380:0624/174858.605:VERBOSE1:components\component_updater\component_installer.cc:477] StartRegistration for Subresource Filter Rules
+[12636:28324:0624/174858.605:VERBOSE1:components\component_updater\component_installer.cc:477] StartRegistration for Optimization Hints
+[12636:15632:0624/174858.605:VERBOSE1:components\component_updater\component_installer.cc:477] StartRegistration for Trust Token Key Commitments
+[12636:27236:0624/174858.605:VERBOSE1:chrome\browser\component_updater\first_party_sets_component_installer.cc:37] Registering Related Website Sets component.
+[12636:27236:0624/174858.605:VERBOSE1:chrome\browser\component_updater\privacy_sandbox_attestations_component_installer.cc:181] Registering Privacy Sandbox Attestations component
+[12636:7332:0624/174858.605:VERBOSE1:components\component_updater\component_installer.cc:477] StartRegistration for Privacy Sandbox Attestations
+[12636:27236:0624/174858.605:VERBOSE1:chrome\browser\component_updater\file_type_policies_component_installer.cc:126] Registering File Type Policies component.
+[12636:11996:0624/174858.605:VERBOSE1:components\component_updater\component_installer.cc:477] StartRegistration for Certificate Error Assistant
+[12636:29380:0624/174858.605:VERBOSE1:components\component_updater\component_installer.cc:477] StartRegistration for CRLSet
+[12636:21900:0624/174858.605:VERBOSE1:components\component_updater\component_installer.cc:477] StartRegistration for MEI Preload
+[12636:27900:0624/174858.605:VERBOSE1:components\component_updater\component_installer.cc:477] StartRegistration for Origin Trials
+[12636:28324:0624/174858.605:VERBOSE1:components\component_updater\component_installer.cc:477] StartRegistration for PKI Metadata
+[12636:26468:0624/174858.605:VERBOSE1:components\component_updater\component_installer.cc:477] StartRegistration for File Type Policies
+[12636:23848:0624/174858.605:VERBOSE1:components\component_updater\component_installer.cc:312] Preinstalled component found for Widevine Content Decryption Module at C:\Program Files\Google\Chrome\Application\149.0.7827.155\WidevineCdm with version 4.10.3050.0.
+[12636:27236:0624/174858.605:VERBOSE1:chrome\browser\component_updater\hyphenation_component_installer.cc:148] Registering Hyphenation component.
+[12636:27236:0624/174858.605:VERBOSE1:components\component_updater\installer_policies\actor_safety_lists_component_installer.cc:140] Registering Actor Safety Lists Component.
+[12636:15632:0624/174858.605:VERBOSE1:components\component_updater\component_installer.cc:477] StartRegistration for Safety Tips
+[12636:29380:0624/174858.605:VERBOSE1:components\component_updater\component_installer.cc:477] StartRegistration for Crowd Deny
+[12636:27236:0624/174858.606:VERBOSE1:chrome\browser\component_updater\translate_kit_component_installer.cc:210] Registering TranslateKit component.
+[12636:26468:0624/174858.606:VERBOSE1:components\component_updater\component_installer.cc:477] StartRegistration for Hyphenation
+[12636:7332:0624/174858.606:VERBOSE1:components\component_updater\component_installer.cc:312] Preinstalled component found for Privacy Sandbox Attestations at C:\Program Files\Google\Chrome\Application\149.0.7827.155\PrivacySandboxAttestationsPreloaded with version 2025.7.18.0.
+[12636:28324:0624/174858.606:VERBOSE1:components\component_updater\component_installer.cc:477] StartRegistration for Zxcvbn Data Dictionaries
+[12636:27236:0624/174858.606:VERBOSE1:chrome\browser\component_updater\wasm_tts_engine_component_installer.cc:286] Registering WASM TTS Engine component.
+[12636:27236:0624/174858.606:VERBOSE1:chrome\browser\component_updater\captcha_provider_component_installer.cc:175] Registering Captcha Provider component.
+[12636:27900:0624/174858.606:VERBOSE1:components\component_updater\component_installer.cc:477] StartRegistration for Amount Extraction Heuristic Regexes
+[12636:23848:0624/174858.606:VERBOSE1:components\component_updater\component_installer.cc:477] StartRegistration for Actor Safety Lists
+[12636:11996:0624/174858.606:VERBOSE1:components\component_updater\component_installer.cc:477] StartRegistration for WASM TTS Engine
+[12636:26468:0624/174858.606:VERBOSE1:components\component_updater\component_installer.cc:477] StartRegistration for Captcha Providers
+[12636:21900:0624/174858.606:VERBOSE1:components\component_updater\component_installer.cc:312] Preinstalled component found for MEI Preload at C:\Program Files\Google\Chrome\Application\149.0.7827.155\MEIPreload with version 1.0.7.1652906823.
+[12636:27236:0624/174858.607:VERBOSE1:chrome\browser\profiles\profile_manager.cc:1408] AddKeepAlive(Default, kBrowserWindow). keep_alives=[kWaitingForFirstBrowserWindow (1), kBrowserWindow (1)]
+[12636:27236:0624/174858.607:VERBOSE1:chrome\browser\profiles\profile_manager.cc:1490] ClearFirstBrowserWindowKeepAlive(Default). keep_alives=[kBrowserWindow (1)]
+[12636:20032:0624/174858.610:VERBOSE1:extensions\browser\content_verifier\content_verifier.cc:944] OnFetchComplete ahfgeienlihckogmohjhadlkjgocpleb success:0
+[12636:20032:0624/174858.610:VERBOSE1:extensions\browser\content_verifier\content_verifier.cc:944] OnFetchComplete mhjfbmdgcfjbbpaeojofohoefgiehjai success:0
+[12636:20032:0624/174858.610:VERBOSE1:extensions\browser\content_verifier\content_verifier.cc:944] OnFetchComplete nkeimhogjdpnpccoofpliimaahmaaome success:0
+[12636:20032:0624/174858.610:VERBOSE1:extensions\browser\content_verifier\content_verifier.cc:944] OnFetchComplete fignfifoniblkonapihmkfakmlgkbkcf success:0
+[12636:4736:0624/174858.610:WARNING:chrome\browser\extensions\external_pref_loader.cc:294] You are using an old-style extension deployment method (external_extensions.json), which will soon be deprecated. (see http://developer.chrome.com/docs/extensions/how-to/distribute/install-extensions)
+[28352:27060:0624/174858.626:ERROR:ui\gl\direct_composition_support.cc:247] GetGpuDriverOverlayInfo: Failed to retrieve video device
+[28352:27060:0624/174858.628:VERBOSE1:components\viz\service\main\viz_main_impl.cc:87] VizNullHypothesis is disabled (not a warning)
+[12636:27236:0624/174858.635:VERBOSE1:chrome\browser\ui\views\omnibox\omnibox_popup_closer.cc:65] Closing omnibox popup with reason: kRevertAll
+[12636:27236:0624/174858.635:VERBOSE1:chrome\browser\ui\views\omnibox\omnibox_popup_closer.cc:65] Closing omnibox popup with reason: kBrowserWidgetMoved
+[12636:27236:0624/174858.648:VERBOSE1:chrome\browser\enterprise\data_protection\data_protection_navigation_observer.cc:227] enterprise.data_protection: same document navigation: 0
+[12636:27236:0624/174858.648:VERBOSE1:chrome\browser\enterprise\data_protection\data_protection_navigation_observer.cc:229] enterprise.data_protection: URL to scan: http://localhost:8005/index.html
+[12636:27236:0624/174858.648:VERBOSE1:components\signin\internal\identity_manager\mutable_profile_oauth2_token_service_delegate.cc:443] MutablePO2TS::RefreshTokenIsAvailable
+[12636:27236:0624/174858.653:VERBOSE1:chrome\browser\ui\views\omnibox\omnibox_popup_closer.cc:65] Closing omnibox popup with reason: kRevertAll
+[12636:27236:0624/174858.654:VERBOSE1:components\signin\internal\identity_manager\mutable_profile_oauth2_token_service_delegate.cc:443] MutablePO2TS::RefreshTokenIsAvailable
+[22864:29616:0624/174858.658:VERBOSE1:net\base\network_delegate.cc:38] NetworkDelegate::NotifyBeforeURLRequest: http://clients2.google.com/time/1/current?cup2key=10:5Rw1JpLYbUSW7eKOdyGbxEoxMEiaQYcOKabmu11y8Qo&cup2hreq=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+[12636:27236:0624/174858.659:VERBOSE1:components\signin\internal\identity_manager\mutable_profile_oauth2_token_service_delegate.cc:599] MutablePO2TS::OnWebDataServiceRequestDone. Result type: 6
+[12636:27236:0624/174858.659:VERBOSE1:components\signin\internal\identity_manager\mutable_profile_oauth2_token_service_delegate.cc:661] MutablePO2TS::LoadAllCredentialsIntoMemory; 0 credential(s).
+[12636:27236:0624/174858.659:VERBOSE1:components\signin\internal\identity_manager\mutable_profile_oauth2_token_service_delegate.cc:443] MutablePO2TS::RefreshTokenIsAvailable
+[12636:27236:0624/174858.659:VERBOSE1:google_apis\gaia\gaia_auth_util.cc:53] Canonicalized @gmail.com to @gmail.com
+[12636:27236:0624/174858.659:VERBOSE1:google_apis\gaia\gaia_auth_util.cc:53] Canonicalized @gmail.com to @gmail.com
+[12636:27236:0624/174858.659:VERBOSE1:components\signin\internal\identity_manager\mutable_profile_oauth2_token_service_delegate.cc:443] MutablePO2TS::RefreshTokenIsAvailable
+[12636:27236:0624/174858.659:VERBOSE1:components\signin\internal\identity_manager\mutable_profile_oauth2_token_service_delegate.cc:443] MutablePO2TS::RefreshTokenIsAvailable
+[12636:27236:0624/174858.659:VERBOSE1:components\signin\core\browser\account_reconcilor.cc:339] AccountReconcilor::OnEndBatchOfRefreshTokenStateChanges. Reconcilor state: 1
+[27132:15312:0624/174858.661:INFO:third_party\webrtc\rtc_base\cpu_info.cc:77] Available number of cores: 22
+[29324:2812:0624/174858.661:INFO:third_party\webrtc\rtc_base\cpu_info.cc:77] Available number of cores: 22
+[22864:29616:0624/174858.662:VERBOSE1:net\base\network_delegate.cc:38] NetworkDelegate::NotifyBeforeURLRequest: http://localhost:8005/index.html
+[12636:27236:0624/174858.663:VERBOSE1:components\signin\internal\identity_manager\mutable_profile_oauth2_token_service_delegate.cc:443] MutablePO2TS::RefreshTokenIsAvailable
+[12636:27236:0624/174858.667:VERBOSE1:components\component_updater\component_installer.cc:548] FinishRegistration for Chrome Improved Recovery
+[12636:27236:0624/174858.667:VERBOSE1:components\component_updater\component_updater_service.cc:177] CrxUpdateService starting up. First update attempt will take place in 60 s seconds. Next update attempt will take place in 18000 s seconds. 
+[12636:27236:0624/174858.667:VERBOSE1:components\component_updater\component_installer.cc:548] FinishRegistration for Subresource Filter Rules
+[12636:27236:0624/174858.667:VERBOSE1:components\component_updater\component_installer.cc:548] FinishRegistration for Trust Token Key Commitments
+[12636:27236:0624/174858.667:VERBOSE1:components\component_updater\component_installer.cc:548] FinishRegistration for Optimization Hints
+[12636:27236:0624/174858.667:VERBOSE1:components\component_updater\component_installer.cc:548] FinishRegistration for CRLSet
+[12636:27236:0624/174858.667:VERBOSE1:components\component_updater\component_installer.cc:548] FinishRegistration for File Type Policies
+[12636:27236:0624/174858.667:VERBOSE1:components\component_updater\component_installer.cc:548] FinishRegistration for PKI Metadata
+[12636:27236:0624/174858.667:VERBOSE1:components\component_updater\component_installer.cc:548] FinishRegistration for Widevine Content Decryption Module
+[12636:27236:0624/174858.667:VERBOSE1:components\component_updater\component_installer.cc:589] Component ready, version 4.10.3050.0 in C:\Program Files\Google\Chrome\Application\149.0.7827.155\WidevineCdm
+[12636:27236:0624/174858.667:VERBOSE1:components\component_updater\component_installer.cc:548] FinishRegistration for Origin Trials
+[12636:27236:0624/174858.667:VERBOSE1:components\component_updater\component_installer.cc:548] FinishRegistration for Certificate Error Assistant
+[12636:27236:0624/174858.667:VERBOSE1:components\component_updater\component_installer.cc:548] FinishRegistration for Crowd Deny
+[12636:27236:0624/174858.667:VERBOSE1:components\component_updater\component_installer.cc:548] FinishRegistration for Hyphenation
+[12636:27236:0624/174858.667:VERBOSE1:components\component_updater\component_installer.cc:548] FinishRegistration for Safety Tips
+[12636:27236:0624/174858.667:VERBOSE1:components\component_updater\component_installer.cc:548] FinishRegistration for Zxcvbn Data Dictionaries
+[12636:27236:0624/174858.667:VERBOSE1:components\component_updater\component_installer.cc:548] FinishRegistration for Privacy Sandbox Attestations
+[12636:27236:0624/174858.667:VERBOSE1:components\component_updater\component_installer.cc:589] Component ready, version 2025.7.18.0 in C:\Program Files\Google\Chrome\Application\149.0.7827.155\PrivacySandboxAttestationsPreloaded
+[22864:29616:0624/174858.667:VERBOSE1:net\base\network_delegate.cc:38] NetworkDelegate::NotifyBeforeURLRequest: https://accounts.google.com/ListAccounts?gpsia=1&source=ChromiumBrowser&json=standard&laf=b64bin
+[12636:27236:0624/174858.667:VERBOSE1:chrome\browser\component_updater\privacy_sandbox_attestations_component_installer.cc:111] Privacy Sandbox Attestations Component ready, version 2025.7.18.0 in C:\Program Files\Google\Chrome\Application\149.0.7827.155\PrivacySandboxAttestationsPreloaded
+[12636:27236:0624/174858.667:VERBOSE1:chrome\browser\component_updater\privacy_sandbox_attestations_component_installer.cc:188] Received privacy sandbox attestations file
+[22864:29616:0624/174858.667:VERBOSE1:net\base\network_delegate.cc:38] NetworkDelegate::NotifyBeforeURLRequest: https://clientservices.googleapis.com/chrome-variations/seed?osname=win&channel=stable&milestone=149
+[12636:27236:0624/174858.667:VERBOSE1:components\component_updater\component_installer.cc:548] FinishRegistration for MEI Preload
+[12636:27236:0624/174858.667:VERBOSE1:components\component_updater\component_installer.cc:589] Component ready, version 1.0.7.1652906823 in C:\Program Files\Google\Chrome\Application\149.0.7827.155\MEIPreload
+[12636:27236:0624/174858.667:VERBOSE1:components\component_updater\component_installer.cc:548] FinishRegistration for Actor Safety Lists
+[12636:27236:0624/174858.667:VERBOSE1:components\component_updater\component_installer.cc:548] FinishRegistration for Captcha Providers
+[12636:27236:0624/174858.667:VERBOSE1:components\component_updater\component_installer.cc:548] FinishRegistration for WASM TTS Engine
+[12636:27236:0624/174858.667:VERBOSE1:components\component_updater\component_installer.cc:548] FinishRegistration for Amount Extraction Heuristic Regexes
+[12636:27236:0624/174858.667:VERBOSE1:chrome\browser\profiles\profile_manager.cc:1408] AddKeepAlive(Default, kExtensionUpdater). keep_alives=[kBrowserWindow (1), kExtensionUpdater (1)]
+[12636:27236:0624/174858.667:VERBOSE1:chrome\browser\local_discovery\service_discovery_device_lister.cc:36] DeviceListerStart: service_type: _googlecast._tcp.local
+[12636:27236:0624/174858.667:VERBOSE1:chrome\browser\local_discovery\service_discovery_device_lister.cc:42] DiscoverNewDevices: service_type: _googlecast._tcp.local
+[22864:29616:0624/174858.668:VERBOSE1:net\base\network_delegate.cc:38] NetworkDelegate::NotifyBeforeURLRequest: https://safebrowsingohttpgateway.googleapis.com/v1/ohttp/hpkekeyconfig?key=AIzaSyA2KlwBX3mkFo30om9LUFYQhpqLoa_BNhE
+[12636:27236:0624/174858.675:VERBOSE1:chrome\browser\component_updater\widevine_cdm_component_installer.cc:94] Registering Widevine CDM 4.10.3050.0 with Chrome
+[12636:27236:0624/174858.676:VERBOSE1:components\privacy_sandbox\privacy_sandbox_attestations\privacy_sandbox_attestations.cc:480] Parsed Privacy Sandbox Attestation list version: 2025.7.18.0
+[12636:27236:0624/174858.676:VERBOSE1:components\privacy_sandbox\privacy_sandbox_attestations\privacy_sandbox_attestations.cc:482] Number of attestation entries: 263
+[12636:27236:0624/174858.678:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:262] Acquiring <PartitionedLockId>{id: 0x31, partition: 0} for Start@chrome\browser\web_applications\generated_icon_fix_manager.cc:61
+[12636:27236:0624/174858.678:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:243] All locks acquired for Start@chrome\browser\web_applications\generated_icon_fix_manager.cc:61
+[12636:27236:0624/174858.682:VERBOSE1:components\segmentation_platform\internal\signals\signal_filter_processor.cc:61] Segmentation platform started observing Session.TotalDuration
+[12636:27236:0624/174858.682:VERBOSE1:components\segmentation_platform\internal\signals\signal_filter_processor.cc:61] Segmentation platform started observing Commerce.PriceDrops.ActiveTabNavigationComplete.IsProductDetailPage
+[12636:27236:0624/174858.682:VERBOSE1:components\segmentation_platform\internal\signals\signal_filter_processor.cc:54] Segmentation platform started observing Autofill_PolledCreditCardSuggestions
+[12636:27236:0624/174858.682:VERBOSE1:components\segmentation_platform\internal\signals\signal_filter_processor.cc:61] Segmentation platform started observing IOS.ParcelTracking.Tracked.AutoTrack
+[12636:27236:0624/174858.682:VERBOSE1:components\segmentation_platform\internal\signals\signal_filter_processor.cc:61] Segmentation platform started observing Omnibox.SuggestionUsed.ClientSummarizedResultType
+[12636:27236:0624/174858.682:VERBOSE1:components\segmentation_platform\internal\signals\signal_filter_processor.cc:54] Segmentation platform started observing MetadataWriter
+[12636:27236:0624/174858.682:VERBOSE1:components\segmentation_platform\internal\signals\signal_filter_processor.cc:61] Segmentation platform started observing Sync.DeviceCount2
+[12636:27236:0624/174858.682:VERBOSE1:components\segmentation_platform\internal\signals\signal_filter_processor.cc:61] Segmentation platform started observing Sync.DeviceCount2.Phone
+[12636:27236:0624/174858.682:VERBOSE1:components\segmentation_platform\internal\signals\signal_filter_processor.cc:61] Segmentation platform started observing Sync.DeviceCount2.Desktop
+[12636:27236:0624/174858.682:VERBOSE1:components\segmentation_platform\internal\signals\signal_filter_processor.cc:61] Segmentation platform started observing Sync.DeviceCount2.Tablet
+[12636:27236:0624/174858.682:VERBOSE1:components\segmentation_platform\internal\signals\signal_filter_processor.cc:54] Segmentation platform started observing MobileBookmarkManagerOpen
+[12636:27236:0624/174858.682:VERBOSE1:components\segmentation_platform\internal\signals\signal_filter_processor.cc:54] Segmentation platform started observing NewTabPage.MostVisited.Clicked
+[12636:27236:0624/174858.682:VERBOSE1:components\segmentation_platform\internal\signals\signal_filter_processor.cc:54] Segmentation platform started observing TabGroup.Created.OpenInNewTab
+[12636:27236:0624/174858.682:VERBOSE1:components\segmentation_platform\internal\signals\signal_filter_processor.cc:54] Segmentation platform started observing Android.HistoryPage.OpenItem
+[12636:27236:0624/174858.682:VERBOSE1:components\segmentation_platform\internal\signals\signal_filter_processor.cc:54] Segmentation platform started observing MobileMenuRecentTabs
+[12636:27236:0624/174858.682:VERBOSE1:components\segmentation_platform\internal\signals\signal_filter_processor.cc:61] Segmentation platform started observing PasswordManager.ManagePasswordsReferrer
+[12636:27236:0624/174858.682:VERBOSE1:components\segmentation_platform\internal\signals\signal_filter_processor.cc:61] Segmentation platform started observing PasswordManager.ProfileStore.TotalAccountsHiRes3.WithScheme.Https
+[12636:27236:0624/174858.682:VERBOSE1:components\segmentation_platform\internal\signals\signal_filter_processor.cc:61] Segmentation platform started observing PasswordManager.FillingAssistance
+[12636:27236:0624/174858.682:VERBOSE1:components\segmentation_platform\internal\signals\signal_filter_processor.cc:61] Segmentation platform started observing PasswordManager.SavedPasswordIsGenerated
+[12636:27236:0624/174858.682:VERBOSE1:components\segmentation_platform\internal\signals\signal_filter_processor.cc:61] Segmentation platform started observing PasswordManager.SaveUIDismissalReason
+[12636:27236:0624/174858.682:VERBOSE1:components\segmentation_platform\internal\signals\signal_filter_processor.cc:61] Segmentation platform started observing PasswordManager.SaveUIDismissalReason
+[12636:27236:0624/174858.682:VERBOSE1:components\segmentation_platform\internal\signals\signal_filter_processor.cc:61] Segmentation platform started observing IOS.CredentialExtension.IsEnabled.Startup
+[12636:27236:0624/174858.682:VERBOSE1:components\segmentation_platform\internal\signals\signal_filter_processor.cc:61] Segmentation platform started observing Session.TotalDuration
+[12636:27236:0624/174858.682:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:286] Releasing <PartitionedLockId>{id: 0x31, partition: 0} requested by Start@chrome\browser\web_applications\generated_icon_fix_manager.cc:61
+[22864:29616:0624/174858.683:VERBOSE1:net\third_party\quiche\src\quiche\quic\core\tls_handshaker.cc:109] TlsClient: Continuing handshake
+[19640:15604:0624/174858.685:INFO:third_party\webrtc\rtc_base\cpu_info.cc:77] Available number of cores: 22
+[12636:27236:0624/174858.687:VERBOSE1:components\signin\internal\identity_manager\mutable_profile_oauth2_token_service_delegate.cc:443] MutablePO2TS::RefreshTokenIsAvailable
+[28192:24740:0624/174858.688:INFO:third_party\webrtc\rtc_base\cpu_info.cc:77] Available number of cores: 22
+[22864:29616:0624/174858.689:VERBOSE1:net\base\network_delegate.cc:38] NetworkDelegate::NotifyBeforeURLRequest: https://update.googleapis.com/service/update2/json?cup2key=16:r4E6t0LwaWmMX6oqDHzmfoi_V6fCMKE0_gFA87BYd6I&cup2hreq=a7987f774cb6a02050dd148c59f145fd6d06cd34d445b6f49aadf6d9ce1e29dd
+[22864:29616:0624/174858.690:VERBOSE1:net\base\network_delegate.cc:38] NetworkDelegate::NotifyBeforeURLRequest: https://www.google.com/async/folae?async=_fmt:pb&udm=50&client_locale=ko
+[25020:27984:0624/174858.697:INFO:third_party\webrtc\rtc_base\cpu_info.cc:77] Available number of cores: 22
+[19640:15604:0624/174858.702:VERBOSE1:extensions\renderer\script_context.cc:150] Created context:
+  extension id:           nkeimhogjdpnpccoofpliimaahmaaome
+  frame:                  0x14e402030d50
+  URL:                    
+  context_type:           BLESSED_EXTENSION
+  effective extension id: nkeimhogjdpnpccoofpliimaahmaaome
+  effective context type: BLESSED_EXTENSION
+[19640:15604:0624/174858.703:VERBOSE1:extensions\renderer\script_context.cc:150] Created context:
+  extension id:           (none)
+  frame:                  (nil)
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[19640:15604:0624/174858.703:VERBOSE1:extensions\renderer\dispatcher.cc:493] Num tracked contexts: 1
+[22864:29616:0624/174858.720:VERBOSE1:net\third_party\quiche\src\quiche\quic\core\tls_handshaker.cc:109] TlsClient: Continuing handshake
+[22864:29616:0624/174858.729:VERBOSE1:net\third_party\quiche\src\quiche\quic\core\tls_handshaker.cc:109] TlsClient: Continuing handshake
+[25020:9404:0624/174858.730:VERBOSE1:extensions\renderer\script_context.cc:150] Created context:
+  extension id:           fignfifoniblkonapihmkfakmlgkbkcf
+  frame:                  (nil)
+  URL:                    
+  context_type:           BLESSED_EXTENSION
+  effective extension id: fignfifoniblkonapihmkfakmlgkbkcf
+  effective context type: BLESSED_EXTENSION
+[25020:9404:0624/174858.731:VERBOSE1:extensions\renderer\script_context.cc:150] Created context:
+  extension id:           (none)
+  frame:                  (nil)
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[22864:29616:0624/174858.736:VERBOSE1:net\third_party\quiche\src\quiche\quic\core\tls_handshaker.cc:109] TlsClient: Continuing handshake
+[22864:29616:0624/174858.736:VERBOSE1:net\third_party\quiche\src\quiche\quic\core\tls_handshaker.cc:109] TlsClient: Continuing handshake
+[22864:29616:0624/174858.736:VERBOSE1:net\third_party\quiche\src\quiche\quic\core\tls_handshaker.cc:109] TlsClient: Continuing handshake
+[22864:29616:0624/174858.737:VERBOSE1:net\third_party\quiche\src\quiche\quic\core\tls_handshaker.cc:109] TlsClient: Continuing handshake
+[12636:27236:0624/174858.885:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:136] GetSegmentResult: segment=OPTIMIZATION_TARGET_SEGMENTATION_DEVICE_SWITCHER ignoring DB score, executing model.
+[12636:27236:0624/174858.885:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:277] ExecuteModelAndGetScore: segment=OPTIMIZATION_TARGET_SEGMENTATION_DEVICE_SWITCHER server segment info not available
+[12636:27236:0624/174858.885:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:210] OnGotModelScore: segment=OPTIMIZATION_TARGET_SEGMENTATION_DEVICE_SWITCHER failed to get database model score, trying default model.
+[22864:29616:0624/174859.027:VERBOSE1:net\base\network_delegate.cc:38] NetworkDelegate::NotifyBeforeURLRequest: https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap
+[22864:29616:0624/174859.028:VERBOSE1:net\base\network_delegate.cc:38] NetworkDelegate::NotifyBeforeURLRequest: http://localhost:8005/src/style.css?v=5
+[22864:29616:0624/174859.028:VERBOSE1:net\base\network_delegate.cc:38] NetworkDelegate::NotifyBeforeURLRequest: https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js
+[22864:29616:0624/174859.029:VERBOSE1:net\base\network_delegate.cc:38] NetworkDelegate::NotifyBeforeURLRequest: https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js
+[29324:2812:0624/174859.029:VERBOSE1:extensions\renderer\script_context.cc:150] Created context:
+  extension id:           (none)
+  frame:                  0x7ec02030d50
+  URL:                    
+  context_type:           WEB_PAGE
+  effective extension id: (none)
+  effective context type: WEB_PAGE
+[22864:29616:0624/174859.029:VERBOSE1:net\base\network_delegate.cc:38] NetworkDelegate::NotifyBeforeURLRequest: http://localhost:8005/src/textures_data.js?v=5
+[29324:2812:0624/174859.029:VERBOSE1:extensions\renderer\script_context.cc:150] Created context:
+  extension id:           (none)
+  frame:                  (nil)
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[29324:2812:0624/174859.029:VERBOSE1:extensions\renderer\dispatcher.cc:493] Num tracked contexts: 1
+[22864:29616:0624/174859.035:VERBOSE1:net\base\network_delegate.cc:38] NetworkDelegate::NotifyBeforeURLRequest: http://localhost:8005/src/app.js?v=5
+[22864:29616:0624/174859.061:VERBOSE1:net\base\network_delegate.cc:38] NetworkDelegate::NotifyBeforeURLRequest: https://fonts.gstatic.com/s/outfit/v15/QGYvz_MVcBeNP4NJtEtq.woff2
+[12636:27236:0624/174859.167:VERBOSE1:components\signin\core\browser\account_reconcilor.cc:559] AccountReconcilor::OnAccountsInCookieUpdated: CookieJar 0 accounts, Reconcilor's state is 1, Error was 
+[12636:27236:0624/174859.167:VERBOSE1:components\signin\core\browser\account_reconcilor.cc:653] AccountReconcilor::LoadValidAccountsFromTokenService: Chrome 0 accounts
+[12636:27236:0624/174859.167:VERBOSE1:components\signin\core\browser\account_reconcilor.cc:783] AccountReconcilor::CalculateIfMultiloginReconcileIsDone: Error was 
+[12636:27236:0624/174859.167:VERBOSE1:components\signin\core\browser\account_reconcilor.cc:689] AccountReconcilor::StartReconcileIfChromeAccountsChanged
+[12636:27236:0624/174859.167:VERBOSE1:components\signin\core\browser\account_reconcilor.cc:559] AccountReconcilor::OnAccountsInCookieUpdated: CookieJar 0 accounts, Reconcilor's state is 1, Error was 
+[12636:27236:0624/174859.168:VERBOSE1:components\signin\core\browser\account_reconcilor.cc:653] AccountReconcilor::LoadValidAccountsFromTokenService: Chrome 0 accounts
+[12636:27236:0624/174859.168:VERBOSE1:components\signin\core\browser\account_reconcilor.cc:783] AccountReconcilor::CalculateIfMultiloginReconcileIsDone: Error was 
+[12636:27236:0624/174859.168:VERBOSE1:components\signin\core\browser\account_reconcilor.cc:689] AccountReconcilor::StartReconcileIfChromeAccountsChanged
+[12636:27236:0624/174859.252:VERBOSE1:components\update_client\request_sender.cc:188] Request completed from url: https://update.googleapis.com/service/update2/json?cup2key=16:r4E6t0LwaWmMX6oqDHzmfoi_V6fCMKE0_gFA87BYd6I&cup2hreq=a7987f774cb6a02050dd148c59f145fd6d06cd34d445b6f49aadf6d9ce1e29dd
+[22864:29616:0624/174859.254:VERBOSE1:net\base\network_delegate.cc:38] NetworkDelegate::NotifyBeforeURLRequest: https://clients2.googleusercontent.com/crx/blobs/AcPRoer2Zc8Cgsxh3W97Ool_-PGKhLaIiI3sel8eaYNhRISQxgF7RAU9V6yJvXw1e7sYHW2j6vqLEhEQKXjZoaglbnja3Q65AdkDVIKRv7wFMJgAqud8KltAaV-Hxvg30NwAxlKa5QTua4OZ5Ic-CUkgokgc_Nvmf1Of/GHBMNNJOOEKPMOECNNNILNNBDLOLHKHI_1_107_1_0.crx
+[22864:29616:0624/174859.644:VERBOSE1:net\base\network_delegate.cc:38] NetworkDelegate::NotifyBeforeURLRequest: https://content-autofill.googleapis.com/v1/pages/ChVDaHJvbWUvMTQ5LjAuNzgyNy4xNTUSLAmrM1CD7_N41RINDazpOZYqBggHGAcgBSH-w1uuPR4tECk4k6ZlgKsjhTIA?alt=proto
+[12636:27236:0624/174859.731:VERBOSE1:components\update_client\url_fetcher_downloader.cc:167] url fetcher response started for: https://clients2.googleusercontent.com/crx/blobs/AcPRoer2Zc8Cgsxh3W97Ool_-PGKhLaIiI3sel8eaYNhRISQxgF7RAU9V6yJvXw1e7sYHW2j6vqLEhEQKXjZoaglbnja3Q65AdkDVIKRv7wFMJgAqud8KltAaV-Hxvg30NwAxlKa5QTua4OZ5Ic-CUkgokgc_Nvmf1Of/GHBMNNJOOEKPMOECNNNILNNBDLOLHKHI_1_107_1_0.crx
+[22864:29616:0624/174859.930:VERBOSE1:net\base\network_delegate.cc:38] NetworkDelegate::NotifyBeforeURLRequest: http://localhost:8005/favicon.ico
+[22864:29616:0624/174900.058:VERBOSE1:net\third_party\quiche\src\quiche\quic\core\tls_handshaker.cc:109] TlsClient: Continuing handshake
+[22864:29616:0624/174900.099:VERBOSE1:net\third_party\quiche\src\quiche\quic\core\tls_handshaker.cc:109] TlsClient: Continuing handshake
+[22864:29616:0624/174900.100:VERBOSE1:net\third_party\quiche\src\quiche\quic\core\tls_handshaker.cc:109] TlsClient: Continuing handshake
+[22864:29616:0624/174900.100:VERBOSE1:net\third_party\quiche\src\quiche\quic\core\tls_handshaker.cc:109] TlsClient: Continuing handshake
+[22864:29616:0624/174900.105:VERBOSE1:net\third_party\quiche\src\quiche\quic\core\tls_handshaker.cc:109] TlsClient: Continuing handshake
+[22864:29616:0624/174900.105:VERBOSE1:net\third_party\quiche\src\quiche\quic\core\tls_handshaker.cc:109] TlsClient: Continuing handshake
+[22864:29616:0624/174900.106:VERBOSE1:net\third_party\quiche\src\quiche\quic\core\tls_handshaker.cc:109] TlsClient: Continuing handshake
+[12636:27236:0624/174901.716:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:262] Acquiring <PartitionedLockId>{id: 0x31, partition: 0} for RunDiagnostics@chrome\browser\ui\web_applications\diagnostics\web_app_icon_health_checks.cc:64
+[12636:27236:0624/174901.716:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:262] Acquiring <PartitionedLockId>{id: 0x61676862696168627061696a69676e6365696465706f6f6b6c6a65626866616b, partition: 1} for RunDiagnostics@chrome\browser\ui\web_applications\diagnostics\web_app_icon_health_checks.cc:64
+[12636:27236:0624/174901.716:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:243] All locks acquired for RunDiagnostics@chrome\browser\ui\web_applications\diagnostics\web_app_icon_health_checks.cc:64
+[12636:27236:0624/174901.716:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:262] Acquiring <PartitionedLockId>{id: 0x31, partition: 0} for RunDiagnostics@chrome\browser\ui\web_applications\diagnostics\web_app_icon_health_checks.cc:64
+[12636:28076:0624/174901.716:VERBOSE1:chrome\installer\util\install_util.cc:218] Existing Chrome version found: 149.0.7827.155
+[12636:27236:0624/174901.716:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:262] Acquiring <PartitionedLockId>{id: 0x6167696d6e6b696a636161686e6763646d6665616e67616b6e6d6c646f6f6d6c, partition: 1} for RunDiagnostics@chrome\browser\ui\web_applications\diagnostics\web_app_icon_health_checks.cc:64
+[12636:27236:0624/174901.717:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:243] All locks acquired for RunDiagnostics@chrome\browser\ui\web_applications\diagnostics\web_app_icon_health_checks.cc:64
+[12636:27236:0624/174901.717:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:262] Acquiring <PartitionedLockId>{id: 0x31, partition: 0} for RunDiagnostics@chrome\browser\ui\web_applications\diagnostics\web_app_icon_health_checks.cc:64
+[12636:27236:0624/174901.717:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:262] Acquiring <PartitionedLockId>{id: 0x6668696870696f6a6b626d6270646a656f616a61706d676b686c6e616b666a66, partition: 1} for RunDiagnostics@chrome\browser\ui\web_applications\diagnostics\web_app_icon_health_checks.cc:64
+[12636:27236:0624/174901.717:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:243] All locks acquired for RunDiagnostics@chrome\browser\ui\web_applications\diagnostics\web_app_icon_health_checks.cc:64
+[12636:27236:0624/174901.717:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:262] Acquiring <PartitionedLockId>{id: 0x31, partition: 0} for RunDiagnostics@chrome\browser\ui\web_applications\diagnostics\web_app_icon_health_checks.cc:64
+[12636:27236:0624/174901.717:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:262] Acquiring <PartitionedLockId>{id: 0x666d676a6a6d6d6d6c666e6b6270706e636162666b6464626a696d63666e636d, partition: 1} for RunDiagnostics@chrome\browser\ui\web_applications\diagnostics\web_app_icon_health_checks.cc:64
+[12636:27236:0624/174901.717:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:243] All locks acquired for RunDiagnostics@chrome\browser\ui\web_applications\diagnostics\web_app_icon_health_checks.cc:64
+[12636:27236:0624/174901.717:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:262] Acquiring <PartitionedLockId>{id: 0x31, partition: 0} for RunDiagnostics@chrome\browser\ui\web_applications\diagnostics\web_app_icon_health_checks.cc:64
+[12636:27236:0624/174901.717:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:262] Acquiring <PartitionedLockId>{id: 0x6b65666a6c65646f6e6b6c696a6f706d6e6f6d6c6362706c6c63686169626167, partition: 1} for RunDiagnostics@chrome\browser\ui\web_applications\diagnostics\web_app_icon_health_checks.cc:64
+[12636:27236:0624/174901.717:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:243] All locks acquired for RunDiagnostics@chrome\browser\ui\web_applications\diagnostics\web_app_icon_health_checks.cc:64
+[12636:28076:0624/174901.717:VERBOSE1:chrome\installer\util\install_util.cc:242] No existing Chrome install found.
+[12636:27236:0624/174901.717:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:262] Acquiring <PartitionedLockId>{id: 0x31, partition: 0} for RunDiagnostics@chrome\browser\ui\web_applications\diagnostics\web_app_icon_health_checks.cc:64
+[12636:27236:0624/174901.717:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:262] Acquiring <PartitionedLockId>{id: 0x6d706e706f6a6b6e706d6d6f706f6d626e6a646367616169656b616a626e6a62, partition: 1} for RunDiagnostics@chrome\browser\ui\web_applications\diagnostics\web_app_icon_health_checks.cc:64
+[12636:27236:0624/174901.717:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:243] All locks acquired for RunDiagnostics@chrome\browser\ui\web_applications\diagnostics\web_app_icon_health_checks.cc:64
+[12636:27236:0624/174901.717:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:262] Acquiring <PartitionedLockId>{id: 0x31, partition: 0} for RunDiagnostics@chrome\browser\ui\web_applications\diagnostics\web_app_icon_health_checks.cc:64
+[12636:27236:0624/174901.717:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:262] Acquiring <PartitionedLockId>{id: 0x706f6d6d61636c6362666768636c68616c626f616b636970636d6d6e6468636a, partition: 1} for RunDiagnostics@chrome\browser\ui\web_applications\diagnostics\web_app_icon_health_checks.cc:64
+[12636:27236:0624/174901.717:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:243] All locks acquired for RunDiagnostics@chrome\browser\ui\web_applications\diagnostics\web_app_icon_health_checks.cc:64
+[12636:27236:0624/174901.718:VERBOSE1:components\enterprise\browser\reporting\saas_usage\saas_usage_report_scheduler.cc:106] Scheduling next browser SaaS usage report at 1601-01-01 04:00:00.000000 UTC
+[12636:27236:0624/174901.718:VERBOSE1:components\enterprise\browser\reporting\saas_usage\saas_usage_report_scheduler.cc:74] No domain metrics aggregated - skipping browser report upload.
+[12636:27236:0624/174901.718:VERBOSE1:components\enterprise\browser\reporting\saas_usage\saas_usage_report_scheduler.cc:106] Scheduling next browser SaaS usage report at 2026-06-24 12:49:01.718719 UTC
+[12636:27236:0624/174901.718:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:262] Acquiring <PartitionedLockId>{id: 0x31, partition: 0} for ApplyRunOnOsLoginPolicySettings@chrome\browser\web_applications\policy\web_app_policy_manager.cc:593
+[12636:27236:0624/174901.718:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:262] Acquiring <PartitionedLockId>{id: 0x31, partition: 0} for ApplyRunOnOsLoginPolicySettings@chrome\browser\web_applications\policy\web_app_policy_manager.cc:593
+[12636:27236:0624/174901.718:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:262] Acquiring <PartitionedLockId>{id: 0x31, partition: 0} for ApplyRunOnOsLoginPolicySettings@chrome\browser\web_applications\policy\web_app_policy_manager.cc:593
+[12636:27236:0624/174901.718:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:262] Acquiring <PartitionedLockId>{id: 0x31, partition: 0} for ApplyRunOnOsLoginPolicySettings@chrome\browser\web_applications\policy\web_app_policy_manager.cc:593
+[12636:27236:0624/174901.719:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:262] Acquiring <PartitionedLockId>{id: 0x31, partition: 0} for ApplyRunOnOsLoginPolicySettings@chrome\browser\web_applications\policy\web_app_policy_manager.cc:593
+[12636:27236:0624/174901.719:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:262] Acquiring <PartitionedLockId>{id: 0x31, partition: 0} for ApplyRunOnOsLoginPolicySettings@chrome\browser\web_applications\policy\web_app_policy_manager.cc:593
+[12636:27236:0624/174901.719:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:262] Acquiring <PartitionedLockId>{id: 0x31, partition: 0} for ApplyRunOnOsLoginPolicySettings@chrome\browser\web_applications\policy\web_app_policy_manager.cc:593
+[12636:27236:0624/174901.721:ERROR:components\device_event_log\device_event_log_impl.cc:200] [17:49:01.721] USB: usb_service_win.cc:108 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+[12636:27236:0624/174901.723:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:286] Releasing <PartitionedLockId>{id: 0x61676862696168627061696a69676e6365696465706f6f6b6c6a65626866616b, partition: 1} requested by RunDiagnostics@chrome\browser\ui\web_applications\diagnostics\web_app_icon_health_checks.cc:64
+[12636:27236:0624/174901.723:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:318] Acquiring <PartitionedLockId>{id: 0x61676862696168627061696a69676e6365696465706f6f6b6c6a65626866616b, partition: 1} for ApplyRunOnOsLoginPolicySettings@chrome\browser\web_applications\policy\web_app_policy_manager.cc:593
+[12636:27236:0624/174901.723:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:243] All locks acquired for ApplyRunOnOsLoginPolicySettings@chrome\browser\web_applications\policy\web_app_policy_manager.cc:593
+[12636:27236:0624/174901.723:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:286] Releasing <PartitionedLockId>{id: 0x31, partition: 0} requested by RunDiagnostics@chrome\browser\ui\web_applications\diagnostics\web_app_icon_health_checks.cc:64
+[12636:27236:0624/174901.723:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:286] Releasing <PartitionedLockId>{id: 0x6167696d6e6b696a636161686e6763646d6665616e67616b6e6d6c646f6f6d6c, partition: 1} requested by RunDiagnostics@chrome\browser\ui\web_applications\diagnostics\web_app_icon_health_checks.cc:64
+[12636:27236:0624/174901.723:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:318] Acquiring <PartitionedLockId>{id: 0x6167696d6e6b696a636161686e6763646d6665616e67616b6e6d6c646f6f6d6c, partition: 1} for ApplyRunOnOsLoginPolicySettings@chrome\browser\web_applications\policy\web_app_policy_manager.cc:593
+[12636:27236:0624/174901.723:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:243] All locks acquired for ApplyRunOnOsLoginPolicySettings@chrome\browser\web_applications\policy\web_app_policy_manager.cc:593
+[12636:27236:0624/174901.723:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:286] Releasing <PartitionedLockId>{id: 0x31, partition: 0} requested by RunDiagnostics@chrome\browser\ui\web_applications\diagnostics\web_app_icon_health_checks.cc:64
+[12636:27236:0624/174901.723:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:286] Releasing <PartitionedLockId>{id: 0x6668696870696f6a6b626d6270646a656f616a61706d676b686c6e616b666a66, partition: 1} requested by RunDiagnostics@chrome\browser\ui\web_applications\diagnostics\web_app_icon_health_checks.cc:64
+[12636:27236:0624/174901.723:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:318] Acquiring <PartitionedLockId>{id: 0x6668696870696f6a6b626d6270646a656f616a61706d676b686c6e616b666a66, partition: 1} for ApplyRunOnOsLoginPolicySettings@chrome\browser\web_applications\policy\web_app_policy_manager.cc:593
+[12636:27236:0624/174901.723:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:243] All locks acquired for ApplyRunOnOsLoginPolicySettings@chrome\browser\web_applications\policy\web_app_policy_manager.cc:593
+[12636:27236:0624/174901.723:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:286] Releasing <PartitionedLockId>{id: 0x31, partition: 0} requested by RunDiagnostics@chrome\browser\ui\web_applications\diagnostics\web_app_icon_health_checks.cc:64
+[12636:27236:0624/174901.723:VERBOSE1:chrome\browser\profiles\profile_manager.cc:1408] AddKeepAlive(Default, kWebAppUpdate). keep_alives=[kBrowserWindow (1), kExtensionUpdater (1), kWebAppUpdate (1)]
+[12636:27236:0624/174901.723:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:286] Releasing <PartitionedLockId>{id: 0x61676862696168627061696a69676e6365696465706f6f6b6c6a65626866616b, partition: 1} requested by ApplyRunOnOsLoginPolicySettings@chrome\browser\web_applications\policy\web_app_policy_manager.cc:593
+[12636:27236:0624/174901.723:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:286] Releasing <PartitionedLockId>{id: 0x31, partition: 0} requested by ApplyRunOnOsLoginPolicySettings@chrome\browser\web_applications\policy\web_app_policy_manager.cc:593
+[12636:27236:0624/174901.723:VERBOSE1:chrome\browser\profiles\profile_manager.cc:1408] AddKeepAlive(Default, kWebAppUpdate). keep_alives=[kBrowserWindow (1), kExtensionUpdater (1), kWebAppUpdate (2)]
+[12636:27236:0624/174901.723:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:286] Releasing <PartitionedLockId>{id: 0x6167696d6e6b696a636161686e6763646d6665616e67616b6e6d6c646f6f6d6c, partition: 1} requested by ApplyRunOnOsLoginPolicySettings@chrome\browser\web_applications\policy\web_app_policy_manager.cc:593
+[12636:27236:0624/174901.723:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:286] Releasing <PartitionedLockId>{id: 0x31, partition: 0} requested by ApplyRunOnOsLoginPolicySettings@chrome\browser\web_applications\policy\web_app_policy_manager.cc:593
+[12636:27236:0624/174901.723:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:286] Releasing <PartitionedLockId>{id: 0x666d676a6a6d6d6d6c666e6b6270706e636162666b6464626a696d63666e636d, partition: 1} requested by RunDiagnostics@chrome\browser\ui\web_applications\diagnostics\web_app_icon_health_checks.cc:64
+[12636:27236:0624/174901.723:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:318] Acquiring <PartitionedLockId>{id: 0x666d676a6a6d6d6d6c666e6b6270706e636162666b6464626a696d63666e636d, partition: 1} for ApplyRunOnOsLoginPolicySettings@chrome\browser\web_applications\policy\web_app_policy_manager.cc:593
+[12636:27236:0624/174901.723:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:243] All locks acquired for ApplyRunOnOsLoginPolicySettings@chrome\browser\web_applications\policy\web_app_policy_manager.cc:593
+[12636:27236:0624/174901.723:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:286] Releasing <PartitionedLockId>{id: 0x31, partition: 0} requested by RunDiagnostics@chrome\browser\ui\web_applications\diagnostics\web_app_icon_health_checks.cc:64
+[12636:27236:0624/174901.723:VERBOSE1:chrome\browser\profiles\profile_manager.cc:1408] AddKeepAlive(Default, kWebAppUpdate). keep_alives=[kBrowserWindow (1), kExtensionUpdater (1), kWebAppUpdate (3)]
+[12636:27236:0624/174901.723:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:286] Releasing <PartitionedLockId>{id: 0x6668696870696f6a6b626d6270646a656f616a61706d676b686c6e616b666a66, partition: 1} requested by ApplyRunOnOsLoginPolicySettings@chrome\browser\web_applications\policy\web_app_policy_manager.cc:593
+[12636:27236:0624/174901.723:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:286] Releasing <PartitionedLockId>{id: 0x31, partition: 0} requested by ApplyRunOnOsLoginPolicySettings@chrome\browser\web_applications\policy\web_app_policy_manager.cc:593
+[12636:27236:0624/174901.723:VERBOSE1:chrome\browser\profiles\profile_manager.cc:1469] RemoveKeepAlive(Default, kWebAppUpdate). keep_alives=[kBrowserWindow (1), kExtensionUpdater (1), kWebAppUpdate (2)]
+[12636:27236:0624/174901.723:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:286] Releasing <PartitionedLockId>{id: 0x6b65666a6c65646f6e6b6c696a6f706d6e6f6d6c6362706c6c63686169626167, partition: 1} requested by RunDiagnostics@chrome\browser\ui\web_applications\diagnostics\web_app_icon_health_checks.cc:64
+[12636:27236:0624/174901.723:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:318] Acquiring <PartitionedLockId>{id: 0x6b65666a6c65646f6e6b6c696a6f706d6e6f6d6c6362706c6c63686169626167, partition: 1} for ApplyRunOnOsLoginPolicySettings@chrome\browser\web_applications\policy\web_app_policy_manager.cc:593
+[12636:27236:0624/174901.723:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:243] All locks acquired for ApplyRunOnOsLoginPolicySettings@chrome\browser\web_applications\policy\web_app_policy_manager.cc:593
+[12636:27236:0624/174901.723:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:286] Releasing <PartitionedLockId>{id: 0x31, partition: 0} requested by RunDiagnostics@chrome\browser\ui\web_applications\diagnostics\web_app_icon_health_checks.cc:64
+[12636:27236:0624/174901.723:VERBOSE1:chrome\browser\profiles\profile_manager.cc:1469] RemoveKeepAlive(Default, kWebAppUpdate). keep_alives=[kBrowserWindow (1), kExtensionUpdater (1), kWebAppUpdate (1)]
+[12636:27236:0624/174901.723:VERBOSE1:chrome\browser\profiles\profile_manager.cc:1408] AddKeepAlive(Default, kWebAppUpdate). keep_alives=[kBrowserWindow (1), kExtensionUpdater (1), kWebAppUpdate (2)]
+[12636:27236:0624/174901.723:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:286] Releasing <PartitionedLockId>{id: 0x666d676a6a6d6d6d6c666e6b6270706e636162666b6464626a696d63666e636d, partition: 1} requested by ApplyRunOnOsLoginPolicySettings@chrome\browser\web_applications\policy\web_app_policy_manager.cc:593
+[12636:27236:0624/174901.723:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:286] Releasing <PartitionedLockId>{id: 0x31, partition: 0} requested by ApplyRunOnOsLoginPolicySettings@chrome\browser\web_applications\policy\web_app_policy_manager.cc:593
+[12636:27236:0624/174901.723:VERBOSE1:chrome\browser\profiles\profile_manager.cc:1469] RemoveKeepAlive(Default, kWebAppUpdate). keep_alives=[kBrowserWindow (1), kExtensionUpdater (1), kWebAppUpdate (1)]
+[12636:27236:0624/174901.724:VERBOSE1:chrome\browser\profiles\profile_manager.cc:1408] AddKeepAlive(Default, kWebAppUpdate). keep_alives=[kBrowserWindow (1), kExtensionUpdater (1), kWebAppUpdate (2)]
+[12636:27236:0624/174901.724:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:286] Releasing <PartitionedLockId>{id: 0x6b65666a6c65646f6e6b6c696a6f706d6e6f6d6c6362706c6c63686169626167, partition: 1} requested by ApplyRunOnOsLoginPolicySettings@chrome\browser\web_applications\policy\web_app_policy_manager.cc:593
+[12636:27236:0624/174901.724:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:286] Releasing <PartitionedLockId>{id: 0x31, partition: 0} requested by ApplyRunOnOsLoginPolicySettings@chrome\browser\web_applications\policy\web_app_policy_manager.cc:593
+[12636:27236:0624/174901.724:VERBOSE1:chrome\browser\profiles\profile_manager.cc:1469] RemoveKeepAlive(Default, kWebAppUpdate). keep_alives=[kBrowserWindow (1), kExtensionUpdater (1), kWebAppUpdate (1)]
+[12636:27236:0624/174901.724:VERBOSE1:chrome\browser\profiles\profile_manager.cc:1469] RemoveKeepAlive(Default, kWebAppUpdate). keep_alives=[kBrowserWindow (1), kExtensionUpdater (1)]
+[12636:27236:0624/174901.724:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:286] Releasing <PartitionedLockId>{id: 0x6d706e706f6a6b6e706d6d6f706f6d626e6a646367616169656b616a626e6a62, partition: 1} requested by RunDiagnostics@chrome\browser\ui\web_applications\diagnostics\web_app_icon_health_checks.cc:64
+[12636:27236:0624/174901.724:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:318] Acquiring <PartitionedLockId>{id: 0x6d706e706f6a6b6e706d6d6f706f6d626e6a646367616169656b616a626e6a62, partition: 1} for ApplyRunOnOsLoginPolicySettings@chrome\browser\web_applications\policy\web_app_policy_manager.cc:593
+[12636:27236:0624/174901.724:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:243] All locks acquired for ApplyRunOnOsLoginPolicySettings@chrome\browser\web_applications\policy\web_app_policy_manager.cc:593
+[12636:27236:0624/174901.724:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:286] Releasing <PartitionedLockId>{id: 0x31, partition: 0} requested by RunDiagnostics@chrome\browser\ui\web_applications\diagnostics\web_app_icon_health_checks.cc:64
+[12636:27236:0624/174901.724:VERBOSE1:chrome\browser\profiles\profile_manager.cc:1408] AddKeepAlive(Default, kWebAppUpdate). keep_alives=[kBrowserWindow (1), kExtensionUpdater (1), kWebAppUpdate (1)]
+[12636:27236:0624/174901.724:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:286] Releasing <PartitionedLockId>{id: 0x6d706e706f6a6b6e706d6d6f706f6d626e6a646367616169656b616a626e6a62, partition: 1} requested by ApplyRunOnOsLoginPolicySettings@chrome\browser\web_applications\policy\web_app_policy_manager.cc:593
+[12636:27236:0624/174901.724:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:286] Releasing <PartitionedLockId>{id: 0x31, partition: 0} requested by ApplyRunOnOsLoginPolicySettings@chrome\browser\web_applications\policy\web_app_policy_manager.cc:593
+[12636:27236:0624/174901.724:VERBOSE1:chrome\browser\profiles\profile_manager.cc:1469] RemoveKeepAlive(Default, kWebAppUpdate). keep_alives=[kBrowserWindow (1), kExtensionUpdater (1)]
+[12636:27236:0624/174901.725:VERBOSE1:components\device_event_log\device_event_log_impl.cc:203] [17:49:01.725] USB: USER: usb_service_win.cc:765 USB device added: path=\\?\usb#vid_8087&pid_0033#5&8875366&0&10#{a5dcbf10-6530-11d2-901f-00c04fb951ed} vendor=32903 "", product=51 "", serial="", driver="BTHUSB", guid=1e574f3b-9043-48d5-b2b7-7f982877e161
+[12636:27236:0624/174901.725:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:286] Releasing <PartitionedLockId>{id: 0x706f6d6d61636c6362666768636c68616c626f616b636970636d6d6e6468636a, partition: 1} requested by RunDiagnostics@chrome\browser\ui\web_applications\diagnostics\web_app_icon_health_checks.cc:64
+[12636:27236:0624/174901.725:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:318] Acquiring <PartitionedLockId>{id: 0x706f6d6d61636c6362666768636c68616c626f616b636970636d6d6e6468636a, partition: 1} for ApplyRunOnOsLoginPolicySettings@chrome\browser\web_applications\policy\web_app_policy_manager.cc:593
+[12636:27236:0624/174901.725:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:243] All locks acquired for ApplyRunOnOsLoginPolicySettings@chrome\browser\web_applications\policy\web_app_policy_manager.cc:593
+[12636:27236:0624/174901.725:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:286] Releasing <PartitionedLockId>{id: 0x31, partition: 0} requested by RunDiagnostics@chrome\browser\ui\web_applications\diagnostics\web_app_icon_health_checks.cc:64
+[12636:27236:0624/174901.725:VERBOSE1:components\device_event_log\device_event_log_impl.cc:203] [17:49:01.726] USB: DEBUG: usb_device_handle_win.cc:1091 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+[12636:27236:0624/174901.725:VERBOSE1:chrome\browser\profiles\profile_manager.cc:1408] AddKeepAlive(Default, kWebAppUpdate). keep_alives=[kBrowserWindow (1), kExtensionUpdater (1), kWebAppUpdate (1)]
+[12636:27236:0624/174901.725:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:286] Releasing <PartitionedLockId>{id: 0x706f6d6d61636c6362666768636c68616c626f616b636970636d6d6e6468636a, partition: 1} requested by ApplyRunOnOsLoginPolicySettings@chrome\browser\web_applications\policy\web_app_policy_manager.cc:593
+[12636:27236:0624/174901.725:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:286] Releasing <PartitionedLockId>{id: 0x31, partition: 0} requested by ApplyRunOnOsLoginPolicySettings@chrome\browser\web_applications\policy\web_app_policy_manager.cc:593
+[12636:27236:0624/174901.725:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:318] Acquiring <PartitionedLockId>{id: 0x31, partition: 0} for SynchronizeInstalledApps@chrome\browser\web_applications\externally_managed_app_manager.cc:186
+[12636:27236:0624/174901.725:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:243] All locks acquired for SynchronizeInstalledApps@chrome\browser\web_applications\externally_managed_app_manager.cc:186
+[12636:27236:0624/174901.725:VERBOSE1:chrome\browser\profiles\profile_manager.cc:1469] RemoveKeepAlive(Default, kWebAppUpdate). keep_alives=[kBrowserWindow (1), kExtensionUpdater (1)]
+[12636:27236:0624/174901.726:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:286] Releasing <PartitionedLockId>{id: 0x31, partition: 0} requested by SynchronizeInstalledApps@chrome\browser\web_applications\externally_managed_app_manager.cc:186
+[12636:27236:0624/174901.726:VERBOSE1:components\device_event_log\device_event_log_impl.cc:203] [17:49:01.726] USB: USER: usb_service_win.cc:765 USB device added: path=\\?\usb#vid_046d&pid_c092#207f37585446#{a5dcbf10-6530-11d2-901f-00c04fb951ed} vendor=1133 "Logitech", product=49298 "G102 LIGHTSYNC Gaming Mouse", serial="207F37585446", driver="usbccgp", guid=837d84ef-bd90-417f-9e1c-4f928257c7f4
+[12636:27236:0624/174901.726:VERBOSE1:components\device_event_log\device_event_log_impl.cc:203] [17:49:01.727] USB: DEBUG: usb_device_handle_win.cc:1091 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+[12636:27236:0624/174901.726:VERBOSE1:components\device_event_log\device_event_log_impl.cc:203] [17:49:01.727] USB: USER: usb_service_win.cc:765 USB device added: path=\\?\usb#vid_1c7a&pid_05a1#037a23pfg607#{a5dcbf10-6530-11d2-901f-00c04fb951ed} vendor=7290 "", product=1441 "", serial="037A23PFG607", driver="WUDFRd", guid=1dcaa179-3576-4514-a08e-ee87264102b1
+[12636:27236:0624/174901.728:VERBOSE1:components\device_event_log\device_event_log_impl.cc:203] [17:49:01.728] USB: USER: usb_service_win.cc:765 USB device added: path=\\?\usb#vid_2a7a&pid_9005#6&1bc93ef9&0&4#{a5dcbf10-6530-11d2-901f-00c04fb951ed} vendor=10874 "", product=36869 "CASUE USB KB", serial="", driver="usbccgp", guid=25acc1a6-5653-4671-99cd-104185abeba0
+[12636:28076:0624/174901.736:VERBOSE1:components\component_updater\component_installer.cc:477] StartRegistration for Related Website Sets
+[12636:27236:0624/174901.736:VERBOSE1:chrome\browser\policy\cloud\fm_registration_token_uploader.cc:193] Client is missing for kUser scope
+[12636:27236:0624/174901.736:VERBOSE1:chrome\browser\policy\cloud\fm_registration_token_uploader.cc:193] Client is missing for kUser scope
+[12636:27236:0624/174901.737:VERBOSE1:components\component_updater\component_installer.cc:548] FinishRegistration for Related Website Sets
+[12636:27236:0624/174901.737:VERBOSE1:chrome\browser\component_updater\first_party_sets_component_installer.cc:42] Received Related Website Sets
+[22864:29616:0624/174901.737:VERBOSE1:net\base\network_delegate.cc:38] NetworkDelegate::NotifyBeforeURLRequest: https://android.clients.google.com/c2dm/register3
+[12636:27236:0624/174901.821:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:262] Acquiring <PartitionedLockId>{id: 0x31, partition: 0} for SynchronizeInstalledApps@chrome\browser\web_applications\externally_managed_app_manager.cc:186
+[12636:27236:0624/174901.821:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:243] All locks acquired for SynchronizeInstalledApps@chrome\browser\web_applications\externally_managed_app_manager.cc:186
+[12636:27236:0624/174901.821:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:286] Releasing <PartitionedLockId>{id: 0x31, partition: 0} requested by SynchronizeInstalledApps@chrome\browser\web_applications\externally_managed_app_manager.cc:186
+[12636:27236:0624/174901.821:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:262] Acquiring <PartitionedLockId>{id: 0x31, partition: 0} for MaybeStartNext@chrome\browser\web_applications\externally_managed_app_manager.cc:271
+[12636:27236:0624/174901.821:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:243] All locks acquired for MaybeStartNext@chrome\browser\web_applications\externally_managed_app_manager.cc:271
+[12636:27236:0624/174901.821:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:286] Releasing <PartitionedLockId>{id: 0x31, partition: 0} requested by MaybeStartNext@chrome\browser\web_applications\externally_managed_app_manager.cc:271
+[12636:27236:0624/174901.821:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:318] Acquiring <PartitionedLockId>{id: 0x31, partition: 0} for ContinueSynchronization@chrome\browser\web_applications\externally_managed_app_manager.cc:736
+[12636:27236:0624/174901.821:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:243] All locks acquired for ContinueSynchronization@chrome\browser\web_applications\externally_managed_app_manager.cc:736
+[12636:27236:0624/174901.821:VERBOSE1:chrome\browser\web_applications\locks\partitioned_lock_manager.cc:286] Releasing <PartitionedLockId>{id: 0x31, partition: 0} requested by ContinueSynchronization@chrome\browser\web_applications\externally_managed_app_manager.cc:736
+[12636:27236:0624/174901.833:VERBOSE1:components\update_client\url_fetcher_downloader.cc:141] Downloaded 156369 bytes in 2578ms from https://clients2.googleusercontent.com/crx/blobs/AcPRoer2Zc8Cgsxh3W97Ool_-PGKhLaIiI3sel8eaYNhRISQxgF7RAU9V6yJvXw1e7sYHW2j6vqLEhEQKXjZoaglbnja3Q65AdkDVIKRv7wFMJgAqud8KltAaV-Hxvg30NwAxlKa5QTua4OZ5Ic-CUkgokgc_Nvmf1Of/GHBMNNJOOEKPMOECNNNILNNBDLOLHKHI_1_107_1_0.crx to C:\Users\SAMSUNG\AppData\Local\Temp\chromecrx_chrome_url_fetcher_12636_2077358891\GHBMNNJOOEKPMOECNNNILNNBDLOLHKHI_1_107_1_0.crx
+[12636:20032:0624/174901.834:VERBOSE1:net\dns\mdns_client_impl.cc:204] Sockets ready:4
+[12636:4736:0624/174901.835:VERBOSE1:components\update_client\unpacker.cc:88] Verifying component: c:\Users\SAMSUNG\.gemini\antigravity\scratch\AntiGG\solar-explorer\chrome_profile\extensions_crx_cache\f83832c37a0969ce89f77b16eaa07457b03f43029abaec00eaedce2674adbaf5
+[12636:4736:0624/174901.836:VERBOSE1:components\update_client\unpacker.cc:123] Unpacking in: C:\Users\SAMSUNG\AppData\Local\Temp\chromecrx_chrome_Unpacker_BeginUnzipping12636_1107012062
+[12636:27236:0624/174901.909:VERBOSE1:chrome\browser\local_discovery\service_discovery_device_lister.cc:54] OnServiceUpdated: service_type: _googlecast._tcp.local, service_name: BID-AT200-43064f5c36bc03d5837f2b319e1841df._googlecast._tcp.local, update: 0
+[12636:27236:0624/174901.909:VERBOSE1:chrome\browser\local_discovery\service_discovery_device_lister.cc:82] Adding resolver for service_name: BID-AT200-43064f5c36bc03d5837f2b319e1841df._googlecast._tcp.local
+[12636:27236:0624/174901.909:VERBOSE1:chrome\browser\local_discovery\service_discovery_device_lister.cc:98] OnResolveComplete: service_type: _googlecast._tcp.local, service_name: BID-AT200-43064f5c36bc03d5837f2b319e1841df._googlecast._tcp.local, status: 0
+[12636:20032:0624/174901.927:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[12636:20032:0624/174901.927:VERBOSE1:google_apis\gcm\engine\registration_request.cc:256] Delaying GCM registration of app: com.google.android.gms, for 25078 milliseconds.
+[12636:27236:0624/174901.983:VERBOSE1:chrome\browser\profiles\profile_manager.cc:1408] AddKeepAlive(Default, kExtensionUpdater). keep_alives=[kBrowserWindow (1), kExtensionUpdater (2)]
+[12636:27236:0624/174902.212:VERBOSE1:extensions\browser\install_signer.cc:349] Sending request: {"hash":"PVrNS+yNMWcQR13MtA3sLTjSTK33ki3DPi8L6bzeeIs=","ids":["ghbmnnjooekpmoecnnnilnnbdlolhkhi"],"protocol_version":1}
+[22864:29616:0624/174902.212:VERBOSE1:net\base\network_delegate.cc:38] NetworkDelegate::NotifyBeforeURLRequest: https://www.googleapis.com/chromewebstore/v1.1/items/verify
+[12636:27236:0624/174902.215:VERBOSE1:chrome\browser\profiles\profile_manager.cc:1469] RemoveKeepAlive(Default, kExtensionUpdater). keep_alives=[kBrowserWindow (1), kExtensionUpdater (1)]
+[22864:29616:0624/174902.216:VERBOSE1:net\base\network_delegate.cc:38] NetworkDelegate::NotifyBeforeURLRequest: https://update.googleapis.com/service/update2/json
+[22864:29616:0624/174902.217:VERBOSE1:net\third_party\quiche\src\quiche\quic\core\tls_handshaker.cc:109] TlsClient: Continuing handshake
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for 128.png
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/af/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/am/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/ar/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/az/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/bg/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/bn/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/ca/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/cs/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/da/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/de/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/el/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/en/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/en_CA/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/en_GB/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/en_US/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/es/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/es_419/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/et/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/fa/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/fi/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/fil/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/fr/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/fr_CA/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/gu/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/hi/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/hr/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/hu/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/id/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/it/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/ja/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/kk/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/kn/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/ko/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/lt/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/lv/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/ml/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/mr/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/ms/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/nl/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/no/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/pl/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/pt_BR/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/pt_PT/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/ro/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/ru/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/sk/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/sl/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/sr/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/sv/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/sw/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/ta/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/te/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/th/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/tr/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/uk/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/ur/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/uz/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/vi/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/zh_CN/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/zh_TW/messages.json
+[12636:21760:0624/174902.233:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for manifest.json
+[12636:20032:0624/174902.234:VERBOSE1:extensions\browser\content_verifier\content_verifier.cc:944] OnFetchComplete ghbmnnjooekpmoecnnnilnnbdlolhkhi success:1
+[22864:29616:0624/174902.251:VERBOSE1:net\third_party\quiche\src\quiche\quic\core\tls_handshaker.cc:109] TlsClient: Continuing handshake
+[14432:28564:0624/174902.251:INFO:third_party\webrtc\rtc_base\cpu_info.cc:77] Available number of cores: 22
+[22864:29616:0624/174902.256:VERBOSE1:net\third_party\quiche\src\quiche\quic\core\tls_handshaker.cc:109] TlsClient: Continuing handshake
+[22864:29616:0624/174902.266:VERBOSE1:net\third_party\quiche\src\quiche\quic\core\tls_handshaker.cc:109] TlsClient: Continuing handshake
+[22864:29616:0624/174902.266:VERBOSE1:net\third_party\quiche\src\quiche\quic\core\tls_handshaker.cc:109] TlsClient: Continuing handshake
+[22864:29616:0624/174902.267:VERBOSE1:net\third_party\quiche\src\quiche\quic\core\tls_handshaker.cc:109] TlsClient: Continuing handshake
+[14432:28516:0624/174902.290:VERBOSE1:extensions\renderer\script_context.cc:150] Created context:
+  extension id:           ghbmnnjooekpmoecnnnilnnbdlolhkhi
+  frame:                  (nil)
+  URL:                    
+  context_type:           BLESSED_EXTENSION
+  effective extension id: ghbmnnjooekpmoecnnnilnnbdlolhkhi
+  effective context type: BLESSED_EXTENSION
+[14432:28516:0624/174902.290:VERBOSE1:extensions\renderer\script_context.cc:150] Created context:
+  extension id:           (none)
+  frame:                  (nil)
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[12636:27236:0624/174902.417:VERBOSE1:components\update_client\request_sender.cc:188] Request completed from url: https://update.googleapis.com/service/update2/json
+[12636:27236:0624/174902.813:VERBOSE1:extensions\browser\install_signer.cc:370] Got response: {
+  "protocol_version": 1,
+  "signature": "UCWefDp+dr7ker6AVAd2OVBA3H3EqPu7+TaUDdoUvRFp8DqlbiQ6XDvpVOrIaWY17k8XHYBWqN2eu8Z4Qb+aolvwhhefALJX3k0AEMlsvLS82XTwZqJTWKz6cZxBMQzA3hPM0Ur7WwG/uHCcZfiQlOKmixEeptVsWx19L6gMmiUdh6wP4qgQaWQFCuO7Ohsn/aIbWgkqITC7IPDastJQgq+M/jTOsIHQj3ngmHZX0wHeEIiG6qlOpc0gxANUacbTGhKoZMay6vfLis6RhqFqzVS/2AjmKeZ2KT5W9+L2SPkNIp4O8bKNgDKDJL0+1/f4G18yOJU+F9aITyngmE0Esw==",
+  "expiry": "2026-09-16",
+  "pubkey_sha1_hash": "a2159534e3753e716819beb8aae14b326927505a"
+}
+
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:226] GetCachedModelScore: segment=OPTIMIZATION_TARGET_SEGMENTATION_CHROME_LOW_USER_ENGAGEMENT does not have a segment info.
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:172] OnGotModelScore: segment=OPTIMIZATION_TARGET_SEGMENTATION_CHROME_LOW_USER_ENGAGEMENT failed to get score from database, executing server model.
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:277] ExecuteModelAndGetScore: segment=OPTIMIZATION_TARGET_SEGMENTATION_CHROME_LOW_USER_ENGAGEMENT server segment info not available
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:201] OnGotModelScore: segment=OPTIMIZATION_TARGET_SEGMENTATION_CHROME_LOW_USER_ENGAGEMENT failed to get score from executing server model, getting score from default model from db.
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:240] GetCachedModelScore: segment=OPTIMIZATION_TARGET_SEGMENTATION_CHROME_LOW_USER_ENGAGEMENT has expired or unavailable result.
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:210] OnGotModelScore: segment=OPTIMIZATION_TARGET_SEGMENTATION_CHROME_LOW_USER_ENGAGEMENT failed to get database model score, trying default model.
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:295] ExecuteModelAndGetScore: segment=OPTIMIZATION_TARGET_SEGMENTATION_CHROME_LOW_USER_ENGAGEMENT signal collection not met
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:226] GetCachedModelScore: segment=OPTIMIZATION_TARGET_SEGMENTATION_SEARCH_USER does not have a segment info.
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:172] OnGotModelScore: segment=OPTIMIZATION_TARGET_SEGMENTATION_SEARCH_USER failed to get score from database, executing server model.
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:277] ExecuteModelAndGetScore: segment=OPTIMIZATION_TARGET_SEGMENTATION_SEARCH_USER server segment info not available
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:201] OnGotModelScore: segment=OPTIMIZATION_TARGET_SEGMENTATION_SEARCH_USER failed to get score from executing server model, getting score from default model from db.
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:240] GetCachedModelScore: segment=OPTIMIZATION_TARGET_SEGMENTATION_SEARCH_USER has expired or unavailable result.
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:210] OnGotModelScore: segment=OPTIMIZATION_TARGET_SEGMENTATION_SEARCH_USER failed to get database model score, trying default model.
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:295] ExecuteModelAndGetScore: segment=OPTIMIZATION_TARGET_SEGMENTATION_SEARCH_USER signal collection not met
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:226] GetCachedModelScore: segment=OPTIMIZATION_TARGET_SEGMENTATION_SHOPPING_USER does not have a segment info.
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:172] OnGotModelScore: segment=OPTIMIZATION_TARGET_SEGMENTATION_SHOPPING_USER failed to get score from database, executing server model.
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:277] ExecuteModelAndGetScore: segment=OPTIMIZATION_TARGET_SEGMENTATION_SHOPPING_USER server segment info not available
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:201] OnGotModelScore: segment=OPTIMIZATION_TARGET_SEGMENTATION_SHOPPING_USER failed to get score from executing server model, getting score from default model from db.
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:252] GetCachedModelScore: Retrieved prediction from database: PredictionResult: timestamp: 13426763513662807 result 0: 0 for segment OPTIMIZATION_TARGET_SEGMENTATION_SHOPPING_USER
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:29] ComputeDiscreteMapping: segment=: result=0, rank=0
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:226] GetCachedModelScore: segment=CROSS_DEVICE_USER_SEGMENT does not have a segment info.
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:172] OnGotModelScore: segment=CROSS_DEVICE_USER_SEGMENT failed to get score from database, executing server model.
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:277] ExecuteModelAndGetScore: segment=CROSS_DEVICE_USER_SEGMENT server segment info not available
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:201] OnGotModelScore: segment=CROSS_DEVICE_USER_SEGMENT failed to get score from executing server model, getting score from default model from db.
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:240] GetCachedModelScore: segment=CROSS_DEVICE_USER_SEGMENT has expired or unavailable result.
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:210] OnGotModelScore: segment=CROSS_DEVICE_USER_SEGMENT failed to get database model score, trying default model.
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:295] ExecuteModelAndGetScore: segment=CROSS_DEVICE_USER_SEGMENT signal collection not met
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:226] GetCachedModelScore: segment=RESUME_HEAVY_USER_SEGMENT does not have a segment info.
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:172] OnGotModelScore: segment=RESUME_HEAVY_USER_SEGMENT failed to get score from database, executing server model.
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:277] ExecuteModelAndGetScore: segment=RESUME_HEAVY_USER_SEGMENT server segment info not available
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:201] OnGotModelScore: segment=RESUME_HEAVY_USER_SEGMENT failed to get score from executing server model, getting score from default model from db.
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:240] GetCachedModelScore: segment=RESUME_HEAVY_USER_SEGMENT has expired or unavailable result.
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:210] OnGotModelScore: segment=RESUME_HEAVY_USER_SEGMENT failed to get database model score, trying default model.
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:295] ExecuteModelAndGetScore: segment=RESUME_HEAVY_USER_SEGMENT signal collection not met
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:226] GetCachedModelScore: segment=PASSWORD_MANAGER_USER does not have a segment info.
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:172] OnGotModelScore: segment=PASSWORD_MANAGER_USER failed to get score from database, executing server model.
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:277] ExecuteModelAndGetScore: segment=PASSWORD_MANAGER_USER server segment info not available
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:201] OnGotModelScore: segment=PASSWORD_MANAGER_USER failed to get score from executing server model, getting score from default model from db.
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:240] GetCachedModelScore: segment=PASSWORD_MANAGER_USER has expired or unavailable result.
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:210] OnGotModelScore: segment=PASSWORD_MANAGER_USER failed to get database model score, trying default model.
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:295] ExecuteModelAndGetScore: segment=PASSWORD_MANAGER_USER signal collection not met
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:226] GetCachedModelScore: segment=CHROME_USER_ENGAGEMENT does not have a segment info.
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:172] OnGotModelScore: segment=CHROME_USER_ENGAGEMENT failed to get score from database, executing server model.
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:277] ExecuteModelAndGetScore: segment=CHROME_USER_ENGAGEMENT server segment info not available
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:201] OnGotModelScore: segment=CHROME_USER_ENGAGEMENT failed to get score from executing server model, getting score from default model from db.
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:240] GetCachedModelScore: segment=CHROME_USER_ENGAGEMENT has expired or unavailable result.
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:210] OnGotModelScore: segment=CHROME_USER_ENGAGEMENT failed to get database model score, trying default model.
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\selection\segment_result_provider.cc:295] ExecuteModelAndGetScore: segment=CHROME_USER_ENGAGEMENT signal collection not met
+[12636:27236:0624/174903.686:VERBOSE1:components\segmentation_platform\internal\database\cached_result_writer.cc:30] CachedResultWriter updating prefs with new result: PredictionResult: timestamp: 13426763513662807 result 0: 0 for segmentation key: shopping_user
+[12636:20032:0624/174903.826:VERBOSE1:components\media_router\common\providers\cast\channel\cast_socket.cc:230] [192.168.45.152:8009, auth=SSL_VERIFIED] Connect readyState = ReadyState::NONE
+[12636:20032:0624/174903.826:VERBOSE1:components\media_router\common\providers\cast\channel\cast_socket.cc:390] [192.168.45.152:8009, auth=SSL_VERIFIED] DoTcpConnect
+[12636:20032:0624/174903.831:VERBOSE1:components\media_router\common\providers\cast\channel\cast_socket.cc:404] [192.168.45.152:8009, auth=SSL_VERIFIED] DoTcpConnectComplete: 0
+[12636:20032:0624/174903.831:VERBOSE1:components\media_router\common\providers\cast\channel\cast_socket.cc:421] [192.168.45.152:8009, auth=SSL_VERIFIED] DoSslConnect
+[12636:20032:0624/174903.868:VERBOSE1:components\media_router\common\providers\cast\channel\cast_socket.cc:444] [192.168.45.152:8009, auth=SSL_VERIFIED] DoSslConnectComplete: 0
+[12636:20032:0624/174903.868:VERBOSE1:components\media_router\common\providers\cast\channel\cast_socket.cc:475] [192.168.45.152:8009, auth=SSL_VERIFIED] DoAuthChallengeSend
+[12636:20032:0624/174903.868:VERBOSE1:components\media_router\common\providers\cast\channel\cast_socket.cc:480] [192.168.45.152:8009, auth=SSL_VERIFIED] Sending challenge: {source_id: sender-0, destination_id: receiver-0, namespace: urn:x-cast:com.google.cast.tp.deviceauth, payload_binary: (22 bytes)}
+[12636:20032:0624/174903.868:VERBOSE1:components\media_router\common\providers\cast\channel\cast_socket.cc:491] [192.168.45.152:8009, auth=SSL_VERIFIED] DoAuthChallengeSendComplete: 0
+[12636:20032:0624/174903.926:VERBOSE1:components\media_router\common\providers\cast\channel\cast_socket.cc:537] [192.168.45.152:8009, auth=SSL_VERIFIED] DoAuthChallengeReplyComplete: 0
+[12636:20032:0624/174903.926:VERBOSE1:components\media_router\common\providers\cast\channel\cast_auth_util.cc:63] Auth message: {response: {signature: (256 bytes), certificate: (1034 bytes)}}
+[12636:20032:0624/174903.927:VERBOSE1:components\media_router\common\providers\cast\channel\cast_socket.cc:187] 
+[12636:20032:0624/174903.927:VERBOSE1:components\media_router\common\providers\cast\channel\cast_socket.cc:556] [192.168.45.152:8009, auth=SSL_VERIFIED] Auth challenge verification succeeded
+[12636:20032:0624/174903.927:VERBOSE1:components\media_router\common\providers\cast\channel\cast_socket.cc:587] DoConnectCallback (error_state = ChannelError::NONE)
+[12636:20032:0624/174903.927:VERBOSE1:components\media_router\common\providers\cast\channel\cast_message_handler.cc:467] Creating VC for channel: 1, source: sender-179555, dest: receiver-0
+[12636:20032:0624/174903.927:VERBOSE1:components\media_router\common\providers\cast\channel\cast_message_handler.cc:445] SendCastMessageToSocket: channel_id: 1, message: {source_id: sender-179555, destination_id: receiver-0, namespace: urn:x-cast:com.google.cast.receiver, payload_utf8: {"requestId":1,"type":"GET_STATUS"}}
+[12636:20032:0624/174903.938:VERBOSE1:components\media_router\common\providers\cast\channel\cast_message_handler.cc:467] Creating VC for channel: 1, source: sender-12645075376215666148, dest: 34d2b863-1072-4cc9-a5cf-696ad915b937
+[12636:20032:0624/174903.938:VERBOSE1:components\media_router\common\providers\cast\channel\cast_message_handler.cc:445] SendCastMessageToSocket: channel_id: 1, message: {source_id: sender-12645075376215666148, destination_id: 34d2b863-1072-4cc9-a5cf-696ad915b937, namespace: urn:x-cast:com.google.cast.media, payload_utf8: {"requestId":2,"type":"GET_STATUS"}}
+[22864:29616:0624/174905.393:VERBOSE1:net\base\network_delegate.cc:38] NetworkDelegate::NotifyBeforeURLRequest: http://edgedl.me.gvt1.com/edgedl/chromewebstore/L2Nocm9tZV9leHRlbnNpb24vYmxvYnMvNzI0QUFXNV9zT2RvdUwyMERESEZGVmJnQQ/1.0.0.6_nmmhkkegccagdldgiimedpiccmgmieda.crx
+[12636:27236:0624/174905.839:VERBOSE1:components\update_client\url_fetcher_downloader.cc:167] url fetcher response started for: http://edgedl.me.gvt1.com/edgedl/chromewebstore/L2Nocm9tZV9leHRlbnNpb24vYmxvYnMvNzI0QUFXNV9zT2RvdUwyMERESEZGVmJnQQ/1.0.0.6_nmmhkkegccagdldgiimedpiccmgmieda.crx
+[12636:27236:0624/174906.011:VERBOSE1:components\update_client\url_fetcher_downloader.cc:141] Downloaded 248531 bytes in 617ms from http://edgedl.me.gvt1.com/edgedl/chromewebstore/L2Nocm9tZV9leHRlbnNpb24vYmxvYnMvNzI0QUFXNV9zT2RvdUwyMERESEZGVmJnQQ/1.0.0.6_nmmhkkegccagdldgiimedpiccmgmieda.crx to C:\Users\SAMSUNG\AppData\Local\Temp\chromecrx_chrome_url_fetcher_12636_1768491442\1.0.0.6_nmmhkkegccagdldgiimedpiccmgmieda.crx
+[12636:21760:0624/174906.013:VERBOSE1:components\update_client\unpacker.cc:88] Verifying component: c:\Users\SAMSUNG\.gemini\antigravity\scratch\AntiGG\solar-explorer\chrome_profile\extensions_crx_cache\81e3a4d43a73699e1b7781723f56b8717175c536685c5450122b30789464ad82
+[12636:21760:0624/174906.014:VERBOSE1:components\update_client\unpacker.cc:123] Unpacking in: C:\Users\SAMSUNG\AppData\Local\Temp\chromecrx_chrome_Unpacker_BeginUnzipping12636_2019314010
+[12636:27236:0624/174906.115:VERBOSE1:chrome\browser\profiles\profile_manager.cc:1408] AddKeepAlive(Default, kExtensionUpdater). keep_alives=[kBrowserWindow (1), kExtensionUpdater (2)]
+[12636:27236:0624/174906.291:VERBOSE1:components\signin\internal\identity_manager\mutable_profile_oauth2_token_service_delegate.cc:443] MutablePO2TS::RefreshTokenIsAvailable
+[12636:27236:0624/174906.292:VERBOSE1:chrome\browser\profiles\profile_manager.cc:1469] RemoveKeepAlive(Default, kExtensionUpdater). keep_alives=[kBrowserWindow (1), kExtensionUpdater (1)]
+[22864:29616:0624/174906.295:VERBOSE1:net\base\network_delegate.cc:38] NetworkDelegate::NotifyBeforeURLRequest: https://update.googleapis.com/service/update2/json
+[22864:29616:0624/174906.295:VERBOSE1:net\third_party\quiche\src\quiche\quic\core\tls_handshaker.cc:109] TlsClient: Continuing handshake
+[22864:29616:0624/174906.297:VERBOSE1:net\third_party\quiche\src\quiche\quic\core\tls_handshaker.cc:109] TlsClient: Continuing handshake
+[22864:29616:0624/174906.297:VERBOSE1:net\third_party\quiche\src\quiche\quic\core\tls_handshaker.cc:130] TlsClient: SSL_do_handshake returned when entering early data. After retry, rv=-1, SSL_in_early_data=1
+[12636:21760:0624/174906.299:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/bg/messages.json
+[12636:21760:0624/174906.299:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/ca/messages.json
+[12636:21760:0624/174906.299:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/cs/messages.json
+[12636:21760:0624/174906.299:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/da/messages.json
+[12636:21760:0624/174906.299:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/de/messages.json
+[12636:21760:0624/174906.299:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/el/messages.json
+[12636:21760:0624/174906.299:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/en/messages.json
+[12636:21760:0624/174906.299:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/en_GB/messages.json
+[12636:21760:0624/174906.299:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/es/messages.json
+[12636:21760:0624/174906.299:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/es_419/messages.json
+[12636:21760:0624/174906.299:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/et/messages.json
+[12636:21760:0624/174906.299:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/fi/messages.json
+[12636:21760:0624/174906.299:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/fil/messages.json
+[12636:21760:0624/174906.299:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/fr/messages.json
+[12636:21760:0624/174906.299:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/hi/messages.json
+[12636:21760:0624/174906.299:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/hr/messages.json
+[12636:21760:0624/174906.299:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/hu/messages.json
+[12636:21760:0624/174906.299:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/id/messages.json
+[12636:21760:0624/174906.299:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/it/messages.json
+[12636:21760:0624/174906.299:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/ja/messages.json
+[12636:21760:0624/174906.299:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/ko/messages.json
+[12636:21760:0624/174906.299:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/lt/messages.json
+[12636:21760:0624/174906.299:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/lv/messages.json
+[12636:21760:0624/174906.299:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/nb/messages.json
+[12636:21760:0624/174906.299:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/nl/messages.json
+[12636:21760:0624/174906.299:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/pl/messages.json
+[12636:21760:0624/174906.299:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/pt_BR/messages.json
+[12636:21760:0624/174906.299:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/pt_PT/messages.json
+[12636:21760:0624/174906.299:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/ro/messages.json
+[12636:21760:0624/174906.299:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/ru/messages.json
+[12636:21760:0624/174906.299:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/sk/messages.json
+[12636:21760:0624/174906.299:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/sl/messages.json
+[12636:21760:0624/174906.299:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/sr/messages.json
+[12636:21760:0624/174906.299:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/sv/messages.json
+[12636:21760:0624/174906.299:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/th/messages.json
+[12636:21760:0624/174906.299:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/tr/messages.json
+[12636:21760:0624/174906.299:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/uk/messages.json
+[12636:21760:0624/174906.299:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/vi/messages.json
+[12636:21760:0624/174906.299:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/zh_CN/messages.json
+[12636:21760:0624/174906.299:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for _locales/zh_TW/messages.json
+[12636:21760:0624/174906.299:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for images/icon_128.png
+[12636:21760:0624/174906.299:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for images/icon_16.png
+[12636:21760:0624/174906.299:VERBOSE1:extensions\browser\content_verifier\content_hash.cc:397] content mismatch for manifest.json
+[12636:20032:0624/174906.300:VERBOSE1:extensions\browser\content_verifier\content_verifier.cc:944] OnFetchComplete nmmhkkegccagdldgiimedpiccmgmieda success:1
+[27340:2760:0624/174906.310:INFO:third_party\webrtc\rtc_base\cpu_info.cc:77] Available number of cores: 22
+[12284:25752:0624/174906.326:INFO:third_party\webrtc\rtc_base\cpu_info.cc:77] Available number of cores: 22
+[27340:2760:0624/174906.328:VERBOSE1:extensions\renderer\script_context.cc:150] Created context:
+  extension id:           nmmhkkegccagdldgiimedpiccmgmieda
+  frame:                  0xe5c02030d50
+  URL:                    
+  context_type:           BLESSED_EXTENSION
+  effective extension id: nmmhkkegccagdldgiimedpiccmgmieda
+  effective context type: BLESSED_EXTENSION
+[27340:2760:0624/174906.328:VERBOSE1:extensions\renderer\script_context.cc:150] Created context:
+  extension id:           (none)
+  frame:                  (nil)
+  URL:                    
+  context_type:           UNSPECIFIED
+  effective extension id: (none)
+  effective context type: UNSPECIFIED
+[27340:2760:0624/174906.333:VERBOSE1:extensions\renderer\dispatcher.cc:493] Num tracked contexts: 1
+[12636:7332:0624/174906.335:VERBOSE1:content\browser\loader\file_url_loader_factory.cc:474] FileURLLoader::Start: file:///C:/Users/SAMSUNG/.gemini/antigravity/scratch/AntiGG/solar-explorer/chrome_profile/Default/Extensions/nmmhkkegccagdldgiimedpiccmgmieda/1.0.0.6_3/craw_background.js
+[12636:20032:0624/174906.337:VERBOSE1:extensions\browser\content_verifier\content_verifier.cc:944] OnFetchComplete nmmhkkegccagdldgiimedpiccmgmieda success:1
+[22864:29616:0624/174906.356:VERBOSE1:net\third_party\quiche\src\quiche\quic\core\tls_handshaker.cc:109] TlsClient: Continuing handshake
+[22864:29616:0624/174906.356:VERBOSE1:net\third_party\quiche\src\quiche\quic\core\tls_handshaker.cc:109] TlsClient: Continuing handshake
+[25020:9404:0624/174906.485:VERBOSE1:extensions\renderer\script_context.cc:163] Destroyed context for extension
+  extension id: fignfifoniblkonapihmkfakmlgkbkcf
+  effective extension id: fignfifoniblkonapihmkfakmlgkbkcf
+[25020:9404:0624/174906.485:VERBOSE1:extensions\renderer\script_context.cc:163] Destroyed context for extension
+  extension id: 
+  effective extension id: 
+[14432:28516:0624/174906.486:VERBOSE1:extensions\renderer\script_context.cc:163] Destroyed context for extension
+  extension id: ghbmnnjooekpmoecnnnilnnbdlolhkhi
+  effective extension id: ghbmnnjooekpmoecnnnilnnbdlolhkhi
+[14432:28516:0624/174906.486:VERBOSE1:extensions\renderer\script_context.cc:163] Destroyed context for extension
+  extension id: 
+  effective extension id: 
