@@ -320,10 +320,18 @@
 
     .nav-label {
       opacity: 0;
-      transition: opacity 0.15s;
+      width: 0;
+      overflow: hidden;
+      transition: opacity 0.15s, width 0.32s var(--ease);
       pointer-events: none;
+      flex-shrink: 0;
     }
-    .sidebar.expanded .nav-label { opacity: 1; transition: opacity 0.22s 0.1s; }
+    .sidebar.expanded .nav-label {
+      opacity: 1;
+      width: auto;
+      overflow: visible;
+      transition: opacity 0.22s 0.1s, width 0.32s var(--ease);
+    }
 
     /* 툴팁 */
     .sidebar:not(.expanded) .nav-links li a::after {
@@ -379,8 +387,19 @@
       justify-content: center;
     }
     .sb-footer a:hover { background: var(--accent-bg); color: var(--accent2); }
-    .sb-footer .nav-label { opacity: 0; transition: opacity 0.15s; }
-    .sidebar.expanded .sb-footer .nav-label { opacity: 1; transition: opacity 0.22s 0.1s; }
+    .sb-footer .nav-label {
+      opacity: 0;
+      width: 0;
+      overflow: hidden;
+      flex-shrink: 0;
+      transition: opacity 0.15s, width 0.32s var(--ease);
+    }
+    .sidebar.expanded .sb-footer .nav-label {
+      opacity: 1;
+      width: auto;
+      overflow: visible;
+      transition: opacity 0.22s 0.1s, width 0.32s var(--ease);
+    }
 
     .sidebar:not(.expanded) .sb-footer a::after {
       content: attr(data-tip);
