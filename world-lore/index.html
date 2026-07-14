@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>세계관 아카이브</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="eyebrow">WORLD ARCHIVE</div>
+    <h1>세계관 아카이브</h1>
+    <div class="sub">플레이한 서브컬쳐 게임들의 세계관을 파일로 정리했습니다.</div>
+  </header>
+
+  <main class="archive-grid" id="archiveGrid"></main>
+
+  <script src="data.js"></script>
+  <script>
+    const grid = document.getElementById('archiveGrid');
+
+    if (!gamesData || gamesData.length === 0) {
+      grid.innerHTML = '<div class="empty-state">아직 등록된 파일이 없습니다. data.js에 게임을 추가해보세요.</div>';
+    } else {
+      gamesData.forEach((game, index) => {
+        const tilt = (index % 2 === 0 ? -1 : 1) * (1 + (index % 3));
+        const card = document.createElement('a');
+        card.href = `detail.html?id=${encodeURIComponent(game.id)}`;
+        card.className = 'file-card';
+        card.style.setProperty('--tilt', `${tilt}deg`);
+
+        card.innerHTML = `
+          <div class="card-inner" style="--accent:${game.accentColor || ''}">
+            <div class="file-number">FILE NO. ${game.fileNumber || String(index + 1).padStart(3, '0')}</div>
+            <h2>${game.title}</h2>
+            <span class="genre-tag">${game.genre || ''}</span>
+            <p class="hook">${game.hook || ''}</p>
+            <span class="open-link">파일 열람 →</span>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+  </script>
+
+</body>
+</html>
