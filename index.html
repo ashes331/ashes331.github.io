@@ -616,7 +616,7 @@
     <!-- 카운터 -->
     <div class="counters fade-up">
       <div class="counter-item">
-        <span class="counter-num" data-target="2">0</span>
+        <span class="counter-num" id="counter-projects" data-target="2">0</span>
         <span class="counter-label">Projects</span>
       </div>
       <div class="counter-item">
@@ -771,38 +771,13 @@
   <hr class="divider fade-up">
 
   <!-- ── PROJECTS ── -->
+  <!-- 카드 마크업은 하단 스크립트의 projects 배열로부터 자동 생성됩니다.
+       새 프로젝트를 추가하려면 그 배열에 객체만 추가하면 됩니다. -->
   <section id="projects" class="section">
     <p class="section-eyebrow fade-up">Projects</p>
     <h2 class="section-title fade-up">만든 것들</h2>
-    <div class="projects-grid fade-up">
-      <a class="project-card featured" href="https://ashes331.github.io/Special-Playground/" target="_blank" rel="noopener">
-        <span class="featured-badge">Featured</span>
-        <div class="card-top"><span class="card-emoji">🎮</span><span class="card-arrow">↗</span></div>
-        <div class="card-title">Special Playground</div>
-        <p class="card-desc">게임, 도구, 알고리즘 시각화까지 — 직접 만들고 실험하는 인터랙티브 프로젝트 모음집. Tetris, Neural Network Playground, Pathfinding Visualizer, RL Playground 등 다수 포함.</p>
-        <div class="card-tags">
-          <span class="card-tag">Vanilla JS</span><span class="card-tag">Canvas API</span>
-          <span class="card-tag">ML / RL</span><span class="card-tag">Games</span><span class="card-tag">Tools</span>
-        </div>
-      </a>
-    </div>
-    <div class="projects-grid two-col fade-up" style="margin-top:1rem;">
-      <a class="project-card" href="./solar-explorer/index.html" target="_blank" rel="noopener">
-        <div class="card-top"><span class="card-emoji">🪐</span><span class="card-arrow">↗</span></div>
-        <div class="card-title">3D Solar Explorer</div>
-        <p class="card-desc">Three.js 기반의 인터랙티브 3D 태양계 시뮬레이터. 천문학적 공전/자전 시간비, 절차적 우주 배경, Web Audio API 음향 시스템 수록.</p>
-        <div class="card-tags">
-          <span class="card-tag">Three.js</span><span class="card-tag">Web Audio API</span>
-          <span class="card-tag">Vanilla JS</span><span class="card-tag">3D Graphics</span>
-        </div>
-      </a>
-      <div class="project-card placeholder">
-        <div class="card-top"><span class="card-emoji">✨</span></div>
-        <div class="card-title">Coming Soon</div>
-        <p class="card-desc">더 많은 것들이 추가될 예정입니다.</p>
-        <div class="card-tags"><span class="card-tag">TBD</span></div>
-      </div>
-    </div>
+    <div class="projects-grid fade-up" id="featured-projects"></div>
+    <div class="projects-grid two-col fade-up" id="other-projects" style="margin-top:1rem;"></div>
   </section>
 
   <footer class="fade-up">
@@ -813,6 +788,59 @@
 </main>
 
 <script>
+/* ══════════════════════════════
+   PROJECTS DATA
+   새 프로젝트를 추가하려면 아래 배열에 객체 하나만 추가하면 됩니다.
+   (README.md의 프로젝트 테이블은 별도 파일이라 수동으로 함께 업데이트해주세요.)
+══════════════════════════════ */
+const projects = [
+  {
+    emoji: "🎮",
+    title: "Special Playground",
+    desc: "게임, 도구, 알고리즘 시각화까지 — 직접 만들고 실험하는 인터랙티브 프로젝트 모음집. Tetris, Neural Network Playground, Pathfinding Visualizer, RL Playground 등 다수 포함.",
+    tags: ["Vanilla JS", "Canvas API", "ML / RL", "Games", "Tools"],
+    link: "https://ashes331.github.io/Special-Playground/",
+    featured: true
+  },
+  {
+    emoji: "🪐",
+    title: "3D Solar Explorer",
+    desc: "Three.js 기반의 인터랙티브 3D 태양계 시뮬레이터. 천문학적 공전/자전 시간비, 절차적 우주 배경, Web Audio API 음향 시스템 수록.",
+    tags: ["Three.js", "Web Audio API", "Vanilla JS", "3D Graphics"],
+    link: "./solar-explorer/index.html",
+    featured: false
+  }
+];
+
+function renderProjectCard(p) {
+  const tagsHtml = p.tags.map(t => `<span class="card-tag">${t}</span>`).join('');
+  return `
+    <a class="project-card${p.featured ? ' featured' : ''}" href="${p.link}" target="_blank" rel="noopener">
+      ${p.featured ? '<span class="featured-badge">Featured</span>' : ''}
+      <div class="card-top"><span class="card-emoji">${p.emoji}</span><span class="card-arrow">↗</span></div>
+      <div class="card-title">${p.title}</div>
+      <p class="card-desc">${p.desc}</p>
+      <div class="card-tags">${tagsHtml}</div>
+    </a>`;
+}
+
+const comingSoonCard = `
+  <div class="project-card placeholder">
+    <div class="card-top"><span class="card-emoji">✨</span></div>
+    <div class="card-title">Coming Soon</div>
+    <p class="card-desc">더 많은 것들이 추가될 예정입니다.</p>
+    <div class="card-tags"><span class="card-tag">TBD</span></div>
+  </div>`;
+
+const featuredProjects = projects.filter(p => p.featured);
+const otherProjects = projects.filter(p => !p.featured);
+
+document.getElementById('featured-projects').innerHTML = featuredProjects.map(renderProjectCard).join('');
+document.getElementById('other-projects').innerHTML = otherProjects.map(renderProjectCard).join('') + comingSoonCard;
+
+// Hero 섹션의 "Projects" 카운터를 배열 길이에 맞춰 자동 갱신
+document.getElementById('counter-projects').dataset.target = projects.length;
+
 /* ══════════════════════════════
    COPYRIGHT YEAR (자동 갱신)
 ══════════════════════════════ */
