@@ -806,13 +806,18 @@
   </section>
 
   <footer class="fade-up">
-    <p>© 2025 ashes331</p>
+    <p>© <span id="copyright-year">2025</span> ashes331</p>
     <p>Built with HTML<span class="footer-dot"></span>CSS<span class="footer-dot"></span>Vanilla JS</p>
   </footer>
 
 </main>
 
 <script>
+/* ══════════════════════════════
+   COPYRIGHT YEAR (자동 갱신)
+══════════════════════════════ */
+document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
 /* ══════════════════════════════
    THEME TOGGLE
 ══════════════════════════════ */
