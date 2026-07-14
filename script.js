@@ -69,9 +69,9 @@ function applyTheme(theme) {
   html.setAttribute('data-theme', theme);
   localStorage.setItem('theme', theme);
   if (theme === 'dark') {
-    themeIcon.textContent  = '🌙';
+    themeIcon.textContent  = '☀️';
     themeLabel.textContent = '라이트 모드';
-    mobileThemeBtn.textContent = '🌙';
+    mobileThemeBtn.textContent = '☀️';
   } else {
     themeIcon.textContent  = '☀️';
     themeLabel.textContent = '다크 모드';
@@ -79,7 +79,7 @@ function applyTheme(theme) {
   }
 }
 
-const savedTheme = localStorage.getItem('theme') || 'dark';
+const savedTheme = localStorage.getItem('theme') || 'light';
 applyTheme(savedTheme);
 
 function toggleTheme() {
@@ -96,7 +96,7 @@ mobileThemeBtn.addEventListener('click', toggleTheme);
   const canvas = document.getElementById('bg-canvas');
   const ctx = canvas.getContext('2d');
   let W, H, particles = [], mouse = { x:-9999, y:-9999 };
-  const COLORS = ['rgba(124,109,255,','rgba(34,211,238,','rgba(167,139,250,'];
+  const COLORS = ['rgba(139,92,246,','rgba(94,234,212,','rgba(249,168,212,'];
 
   function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
   resize();
@@ -131,7 +131,7 @@ mobileThemeBtn.addEventListener('click', toggleTheme);
       const dx=particles[i].x-particles[j].x, dy=particles[i].y-particles[j].y, d=Math.sqrt(dx*dx+dy*dy);
       if (d<100) {
         ctx.beginPath(); ctx.moveTo(particles[i].x,particles[i].y); ctx.lineTo(particles[j].x,particles[j].y);
-        ctx.strokeStyle=`rgba(124,109,255,${0.08*(1-d/100)})`; ctx.lineWidth=0.6; ctx.stroke();
+        ctx.strokeStyle=`rgba(139,92,246,${0.08*(1-d/100)})`; ctx.lineWidth=0.6; ctx.stroke();
       }
     }
     particles.forEach(p=>{p.update();p.draw();});
