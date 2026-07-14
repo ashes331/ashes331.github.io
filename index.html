@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ashes331 — AI · ML · Dev</title>
+  <meta name="description" content="ashes331의 포트폴리오 — ML/DL, NLP, 알고리즘을 탐구하는 개발자." />
+
+  <!-- OG / Twitter Card -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://ashes331.github.io/" />
+  <meta property="og:title"       content="ashes331 — AI · ML · Dev" />
+  <meta property="og:description" content="ML/DL, NLP, 알고리즘을 공부하며 직접 만들고 실험하는 개발자 포트폴리오." />
+  <meta property="og:image"       content="https://ashes331.github.io/og-image.png" />
+  <meta name="twitter:card"       content="summary_large_image" />
+  <meta name="twitter:title"      content="ashes331 — AI · ML · Dev" />
+  <meta name="twitter:description" content="ML/DL, NLP, 알고리즘을 공부하며 직접 만들고 실험하는 개발자 포트폴리오." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- 빛 오브 -->
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
+
+<!-- 파티클 캔버스 -->
+<canvas id="bg-canvas"></canvas>
+
+<!-- ══════════ SIDEBAR ══════════ -->
+<aside class="sidebar" id="sidebar">
+  <button class="sb-toggle" id="sb-toggle" aria-label="사이드바 펼치기/접기">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/>
+    </svg>
+  </button>
+
+  <div class="profile">
+    <div class="avatar"><div class="avatar-inner">ash</div></div>
+    <div class="profile-name">ashes331</div>
+    <div class="profile-role">인공지능소프트웨어학과<br>동양미래대학교</div>
+    <div class="profile-badges">
+      <span class="badge">ML / DL</span>
+      <span class="badge">NLP</span>
+      <span class="badge">Vanilla JS</span>
+    </div>
+    <div class="status-dot">Available for collab</div>
+  </div>
+
+  <nav class="nav-section">
+    <p class="nav-section-label">Navigation</p>
+    <ul class="nav-links">
+      <li><a href="#hero"     class="active" data-tip="Home">    <span class="nav-icon">🏠</span><span class="nav-label">Home</span></a></li>
+      <li><a href="#about"    data-tip="About">   <span class="nav-icon">👤</span><span class="nav-label">About</span></a></li>
+      <li><a href="#now"      data-tip="Now">     <span class="nav-icon">⚡</span><span class="nav-label">Now</span></a></li>
+      <li><a href="#skills"   data-tip="Skills">  <span class="nav-icon">🛠</span><span class="nav-label">Skills</span></a></li>
+      <li><a href="#projects" data-tip="Projects"><span class="nav-icon">📁</span><span class="nav-label">Projects</span></a></li>
+    </ul>
+  </nav>
+
+  <!-- 테마 토글 -->
+  <button class="sb-theme-btn" id="sb-theme-btn" data-tip="테마 전환" aria-label="테마 전환">
+    <span class="nav-icon" id="theme-icon">🌙</span>
+    <span class="nav-label" id="theme-label">라이트 모드</span>
+  </button>
+
+  <div class="sb-footer">
+    <a href="https://github.com/ashes331" target="_blank" rel="noopener" data-tip="GitHub">
+      <span class="nav-icon" style="width:20px;flex-shrink:0;display:flex;align-items:center;justify-content:center;">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+      </span>
+      <span class="nav-label">github.com/ashes331</span>
+    </a>
+  </div>
+</aside>
+
+<!-- ══════════ MOBILE BOTTOM NAV ══════════ -->
+<nav class="mobile-nav" id="mobile-nav">
+  <div class="mobile-nav-inner">
+    <a href="#hero"     class="mobile-nav-btn active" data-section="hero"><span class="m-icon">🏠</span>Home</a>
+    <a href="#about"    class="mobile-nav-btn" data-section="about">      <span class="m-icon">👤</span>About</a>
+    <a href="#now"      class="mobile-nav-btn" data-section="now">        <span class="m-icon">⚡</span>Now</a>
+    <a href="#skills"   class="mobile-nav-btn" data-section="skills">     <span class="m-icon">🛠</span>Skills</a>
+    <a href="#projects" class="mobile-nav-btn" data-section="projects">   <span class="m-icon">📁</span>Work</a>
+    <button class="mobile-nav-btn theme-btn" id="mobile-theme-btn" aria-label="테마 전환">🌙</button>
+  </div>
+</nav>
+
+<!-- ══════════ MAIN ══════════ -->
+<main class="main">
+
+  <!-- ── HERO ── -->
+  <section id="hero" class="section">
+    <p class="hero-greeting fade-up"><span id="typed-text"></span><span class="cursor"></span></p>
+    <h1 class="hero-title fade-up">
+      안녕하세요,
+      <span class="line2"><span class="accent">ashes331</span>입니다.</span>
+    </h1>
+    <p class="hero-desc fade-up">ML/DL, NLP, 알고리즘을 공부하며<br>직접 만들고 실험하는 걸 즐깁니다.</p>
+    <div class="hero-tags fade-up">
+      <span class="tag">Machine Learning</span>
+      <span class="tag">Deep Learning</span>
+      <span class="tag">NLP</span>
+      <span class="tag">Python</span>
+      <span class="tag">Vanilla JS</span>
+    </div>
+    <div class="hero-cta fade-up">
+      <a class="btn btn-primary" href="#projects"><span>프로젝트 보기</span> <span>↓</span></a>
+      <a class="btn btn-ghost" href="https://github.com/ashes331" target="_blank" rel="noopener">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        GitHub
+      </a>
+    </div>
+
+    <!-- 카운터 -->
+    <div class="counters fade-up">
+      <div class="counter-item">
+        <span class="counter-num" id="counter-projects" data-target="2">0</span>
+        <span class="counter-label">Projects</span>
+      </div>
+      <div class="counter-item">
+        <span class="counter-num" data-target="3">0</span>
+        <span class="counter-label">GitHub Repos</span>
+      </div>
+      <div class="counter-item">
+        <span class="counter-num" data-target="2">0</span>
+        <span class="counter-label">Years Studying</span>
+      </div>
+      <div class="counter-item">
+        <span class="counter-num" data-target="12">0</span>
+        <span class="counter-label">Skills</span>
+      </div>
+    </div>
+
+    <div class="scroll-hint fade-up">
+      <div class="scroll-mouse"></div>
+      <span>스크롤하여 더 보기</span>
+    </div>
+  </section>
+
+  <hr class="divider fade-up">
+
+  <!-- ── ABOUT ── -->
+  <section id="about" class="section">
+    <p class="section-eyebrow fade-up">About</p>
+    <h2 class="section-title fade-up">나에 대해서</h2>
+    <div class="about-grid fade-up">
+      <div class="info-card"><div class="info-icon-wrap">🏫</div><div><div class="info-label">School</div><div class="info-value">동양미래대학교</div></div></div>
+      <div class="info-card"><div class="info-icon-wrap">📚</div><div><div class="info-label">Major</div><div class="info-value">인공지능소프트웨어학과</div></div></div>
+      <div class="info-card"><div class="info-icon-wrap">🔬</div><div><div class="info-label">Interests</div><div class="info-value">ML · DL · NLP · Algorithm</div></div></div>
+      <div class="info-card"><div class="info-icon-wrap">🐙</div><div><div class="info-label">GitHub</div><div class="info-value"><a href="https://github.com/ashes331" target="_blank" rel="noopener">github.com/ashes331</a></div></div></div>
+    </div>
+  </section>
+
+  <hr class="divider fade-up">
+
+  <!-- ── NOW ── -->
+  <section id="now" class="section">
+    <p class="section-eyebrow fade-up">Now</p>
+    <h2 class="section-title fade-up">지금 하고 있는 것</h2>
+    <div class="now-grid fade-up">
+      <div class="now-card">
+        <div class="now-dot learning"></div>
+        <div class="now-type">Learning</div>
+        <div>
+          <div class="now-text">Transformer 아키텍처 깊게 파기</div>
+          <div class="now-sub">Attention is All You Need 논문 재현 중</div>
+        </div>
+      </div>
+      <div class="now-card">
+        <div class="now-dot building"></div>
+        <div class="now-type">Building</div>
+        <div>
+          <div class="now-text">Special Playground 콘텐츠 추가</div>
+          <div class="now-sub">새로운 알고리즘 시각화 & 미니게임 제작</div>
+        </div>
+      </div>
+      <div class="now-card">
+        <div class="now-dot reading"></div>
+        <div class="now-type">Reading</div>
+        <div>
+          <div class="now-text">Deep Learning (Ian Goodfellow)</div>
+          <div class="now-sub">Ch.6 Deep Feedforward Networks</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider fade-up">
+
+  <!-- ── SKILLS ── -->
+  <section id="skills" class="section">
+    <p class="section-eyebrow fade-up">Skills</p>
+    <h2 class="section-title fade-up">기술 스택</h2>
+    <div class="skills-container">
+
+      <div class="fade-up">
+        <div class="skill-category-label">AI / Machine Learning</div>
+        <div class="skill-bar-list">
+          <div class="skill-bar-item">
+            <div class="skill-bar-head"><span class="skill-bar-name">🔥 PyTorch</span><span class="skill-pct">82%</span></div>
+            <div class="skill-track"><div class="skill-fill purple" data-pct="82"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-head"><span class="skill-bar-name">🧠 강화학습 (RL)</span><span class="skill-pct">74%</span></div>
+            <div class="skill-track"><div class="skill-fill purple" data-pct="74"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-head"><span class="skill-bar-name">💬 NLP</span><span class="skill-pct">68%</span></div>
+            <div class="skill-track"><div class="skill-fill purple" data-pct="68"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-head"><span class="skill-bar-name">📊 TensorFlow</span><span class="skill-pct">55%</span></div>
+            <div class="skill-track"><div class="skill-fill purple" data-pct="55"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fade-up">
+        <div class="skill-category-label">Programming</div>
+        <div class="skill-bar-list">
+          <div class="skill-bar-item">
+            <div class="skill-bar-head"><span class="skill-bar-name">🐍 Python</span><span class="skill-pct">90%</span></div>
+            <div class="skill-track"><div class="skill-fill teal" data-pct="90"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-head"><span class="skill-bar-name">🌐 JavaScript</span><span class="skill-pct">78%</span></div>
+            <div class="skill-track"><div class="skill-fill teal" data-pct="78"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-head"><span class="skill-bar-name">📐 알고리즘</span><span class="skill-pct">70%</span></div>
+            <div class="skill-track"><div class="skill-fill teal" data-pct="70"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fade-up">
+        <div class="skill-category-label">Libraries & APIs</div>
+        <div class="skill-bar-list">
+          <div class="skill-bar-item">
+            <div class="skill-bar-head"><span class="skill-bar-name">🎨 Canvas API</span><span class="skill-pct">85%</span></div>
+            <div class="skill-track"><div class="skill-fill pink" data-pct="85"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-head"><span class="skill-bar-name">🎵 Web Audio API</span><span class="skill-pct">72%</span></div>
+            <div class="skill-track"><div class="skill-fill pink" data-pct="72"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-head"><span class="skill-bar-name">🪐 Three.js</span><span class="skill-pct">65%</span></div>
+            <div class="skill-track"><div class="skill-fill pink" data-pct="65"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-head"><span class="skill-bar-name">🔢 NumPy / Pandas</span><span class="skill-pct">80%</span></div>
+            <div class="skill-track"><div class="skill-fill pink" data-pct="80"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fade-up">
+        <div class="skill-category-label">Tools</div>
+        <div class="skills-chips">
+          <div class="skill-chip"><span class="skill-dot green"></span>Git / GitHub</div>
+          <div class="skill-chip"><span class="skill-dot green"></span>HTML / CSS</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="divider fade-up">
+
+  <!-- ── PROJECTS ── -->
+  <!-- 카드 마크업은 하단 스크립트의 projects 배열로부터 자동 생성됩니다.
+       새 프로젝트를 추가하려면 그 배열에 객체만 추가하면 됩니다. -->
+  <section id="projects" class="section">
+    <p class="section-eyebrow fade-up">Projects</p>
+    <h2 class="section-title fade-up">만든 것들</h2>
+    <div class="projects-grid fade-up" id="featured-projects"></div>
+    <div class="projects-grid two-col fade-up" id="other-projects" style="margin-top:1rem;"></div>
+  </section>
+
+  <footer class="fade-up">
+    <p>© <span id="copyright-year">2025</span> ashes331</p>
+    <p>Built with HTML<span class="footer-dot"></span>CSS<span class="footer-dot"></span>Vanilla JS</p>
+  </footer>
+
+</main>
+
+<script src="script.js" defer></script>
+</body>
+</html>
