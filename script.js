@@ -19,6 +19,14 @@ const projects = [
     tags: ["Three.js", "Web Audio API", "Vanilla JS", "3D Graphics"],
     link: "./solar-explorer/index.html",
     featured: false
+  },
+  {
+    emoji: "📚",
+    title: "World Lore Archive",
+    desc: "플레이한 서브컬쳐 게임들의 세계관을 파일 카탈로그처럼 정리한 아카이브. 세계관, 타임라인, 주요 세력, 캐릭터, 용어집까지 게임별로 분류.",
+    tags: ["Vanilla JS", "HTML / CSS", "Archive"],
+    link: "./world-lore/index.html",
+    featured: false
   }
 ];
 
