@@ -14,6 +14,38 @@
   <div class="orb orb-3"></div>
   <canvas id="bg-canvas"></canvas>
 
+  <div class="intro-overlay" id="introOverlay">
+    <div class="intro-modal">
+      <button class="intro-skip" id="introSkip">건너뛰기</button>
+
+      <div class="intro-slides" id="introSlides">
+        <div class="intro-slide is-active" data-step="0">
+          <div class="intro-eyebrow">WORLD ARCHIVE</div>
+          <h2>세계관 아카이브에 오신 것을 환영합니다</h2>
+          <p>플레이한 서브컬쳐 게임들의 세계관을, 오래된 기록 보관소의 파일을 열람하듯 정리해두었습니다.</p>
+        </div>
+        <div class="intro-slide" data-step="1">
+          <div class="intro-eyebrow">HOW TO USE</div>
+          <h2>파일을 열람하세요</h2>
+          <p>카드를 클릭하면 각 게임의 세계관, 타임라인, 주요 세력, 캐릭터, 용어집을 순서대로 확인할 수 있습니다.</p>
+        </div>
+        <div class="intro-slide" data-step="2">
+          <div class="intro-eyebrow">READY</div>
+          <h2>입장할 준비가 되셨나요</h2>
+          <p>아카이브의 문이 열립니다.</p>
+        </div>
+      </div>
+
+      <div class="intro-footer">
+        <div class="intro-dots" id="introDots"></div>
+        <div class="intro-actions">
+          <button class="intro-btn ghost" id="introPrev">이전</button>
+          <button class="intro-btn primary" id="introNext">다음</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <header class="site-header">
     <div class="eyebrow">WORLD ARCHIVE</div>
     <h1>세계관 아카이브</h1>
@@ -24,6 +56,7 @@
 
   <script src="data.js"></script>
   <script src="effects.js"></script>
+  <script src="intro.js"></script>
   <script>
     const grid = document.getElementById('archiveGrid');
 
