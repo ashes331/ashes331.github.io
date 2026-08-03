@@ -8,12 +8,6 @@
 </head>
 <body>
 
-  <div class="bg-mesh"></div>
-  <div class="orb orb-1"></div>
-  <div class="orb orb-2"></div>
-  <div class="orb orb-3"></div>
-  <canvas id="bg-canvas"></canvas>
-
   <div class="intro-overlay" id="introOverlay">
     <div class="intro-modal">
       <button class="intro-skip" id="introSkip">건너뛰기</button>
@@ -52,18 +46,29 @@
     <div class="sub">플레이한 서브컬쳐 게임들의 세계관을 파일로 정리했습니다.</div>
   </header>
 
+  <div class="archive-toolbar">
+    <div class="ornate-divider"><span class="line"></span><span class="glyph">◆</span><span class="line"></span></div>
+    <div class="archive-stats" id="archiveStats"></div>
+    <div class="genre-filter" id="genreFilter"></div>
+  </div>
+
   <main class="archive-grid" id="archiveGrid"></main>
 
   <script src="data.js"></script>
-  <script src="effects.js"></script>
+  <script type="module" src="shader-bg.js"></script>
   <script src="intro.js"></script>
   <script>
     const grid = document.getElementById('archiveGrid');
+    const statsWrap = document.getElementById('archiveStats');
+    const filterWrap = document.getElementById('genreFilter');
 
-    if (!gamesData || gamesData.length === 0) {
-      grid.innerHTML = '<div class="empty-state">아직 등록된 파일이 없습니다. data.js에 게임을 추가해보세요.</div>';
-    } else {
-      gamesData.forEach((game, index) => {
+    function renderCards(list) {
+      grid.innerHTML = '';
+      if (!list.length) {
+        grid.innerHTML = '<div class="empty-state">해당 장르의 파일이 없습니다.</div>';
+        return;
+      }
+      list.forEach((game, index) => {
         const tilt = (index % 2 === 0 ? -1 : 1) * (1 + (index % 3));
         const card = document.createElement('a');
         card.href = `detail.html?id=${encodeURIComponent(game.id)}`;
@@ -81,6 +86,49 @@
         `;
         grid.appendChild(card);
       });
+    }
+
+    if (!gamesData || gamesData.length === 0) {
+      statsWrap.style.display = 'none';
+      filterWrap.style.display = 'none';
+      grid.innerHTML = '<div class="empty-state">아직 등록된 파일이 없습니다. data.js에 게임을 추가해보세요.</div>';
+    } else {
+      // 통계 표시
+      statsWrap.innerHTML = `
+        <span><strong>${gamesData.length}</strong>건의 파일 보관 중</span>
+      `;
+
+      // 장르 태그 추출 (·로 구분된 각 게임의 genre 문자열을 분리해 고유값만 모음)
+      const genreSet = new Set();
+      gamesData.forEach(g => {
+        (g.genre || '').split('·').map(t => t.trim()).filter(Boolean).forEach(t => genreSet.add(t));
+      });
+
+      const genres = ['전체', ...Array.from(genreSet)];
+      let active = '전체';
+
+      function renderFilterBar() {
+        filterWrap.innerHTML = genres.map(g =>
+          `<button class="genre-pill${g === active ? ' is-active' : ''}" data-genre="${g}">${g}</button>`
+        ).join('');
+        filterWrap.querySelectorAll('.genre-pill').forEach(btn => {
+          btn.addEventListener('click', () => {
+            active = btn.dataset.genre;
+            renderFilterBar();
+            applyFilter();
+          });
+        });
+      }
+
+      function applyFilter() {
+        const filtered = active === '전체'
+          ? gamesData
+          : gamesData.filter(g => (g.genre || '').includes(active));
+        renderCards(filtered);
+      }
+
+      renderFilterBar();
+      applyFilter();
     }
   </script>
 
