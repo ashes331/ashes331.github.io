@@ -56,7 +56,10 @@
         <div class="file-header" style="--accent:${game.accentColor || ''}">
           <div class="file-number">FILE NO. ${game.fileNumber || ''}</div>
           <h1>${game.title}</h1>
-          <span class="genre-tag">${game.genre || ''}</span>
+          <div class="card-tags-row">
+            ${game.company ? `<span class="company-tag">${game.company}</span>` : ''}
+            <span class="genre-tag">${game.genre || ''}</span>
+          </div>
         </div>
       `;
 

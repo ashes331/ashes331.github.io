@@ -10,6 +10,8 @@
   - id           : URL에 쓰일 고유 식별자 (영문 소문자, 하이픈만 사용, 공백 금지)
                    예: "blue-archive" -> detail.html?id=blue-archive
   - title        : 게임 제목
+  - company      : 개발사 구분용. "호요버스" / "쿠로게임즈" / "프로젝트문" 중 하나를 넣으면
+                   목록 페이지 상단 필터 탭에서 해당 회사로 걸러볼 수 있습니다.
   - genre        : 장르/태그 (카드에 짧게 표시됨)
   - fileNumber   : 파일 번호처럼 표시될 문자열 (3자리 숫자 추천, 순서는 자유)
   - hook         : 목록 카드에 보일 한 줄 소개 (후킹 문구, 20자 내외 추천)
@@ -29,6 +31,7 @@ const gamesData = [
   {
     id: "example-twilight-ark",
     title: "황혼의 방주",
+    company: "프로젝트문",
     genre: "SF · 재난 · 다크판타지",
     fileNumber: "001",
     hook: "가라앉는 세계에서 마지막 배를 지키는 이야기",
@@ -64,6 +67,7 @@ const gamesData = [
   // {
   //   id: "my-second-game",
   //   title: "...",
+  //   company: "호요버스",
   //   genre: "...",
   //   fileNumber: "002",
   //   hook: "...",

@@ -179,6 +179,24 @@ a { color: inherit; text-decoration: none; }
   color: var(--ink);
 }
 
+.card-tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.company-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  padding: 3px 9px;
+  border-radius: 20px;
+  background: rgba(143, 172, 255, 0.14);
+  color: var(--aurora);
+  border: 1px solid var(--border-glow);
+}
+
 .file-card .genre-tag {
   display: inline-block;
   font-family: var(--font-mono);
@@ -187,7 +205,6 @@ a { color: inherit; text-decoration: none; }
   border: 1px solid rgba(236, 228, 211, 0.2);
   border-radius: 20px;
   color: var(--ink-dim);
-  margin-bottom: 14px;
 }
 
 .file-card .hook {
@@ -631,7 +648,7 @@ a { color: inherit; text-decoration: none; }
 }
 .archive-stats strong { color: var(--aurora); font-weight: 600; }
 
-.genre-filter {
+.company-filter {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -639,7 +656,7 @@ a { color: inherit; text-decoration: none; }
   margin-bottom: 8px;
 }
 
-.genre-pill {
+.company-pill {
   font-family: var(--font-mono);
   font-size: 12px;
   padding: 7px 16px;
@@ -650,8 +667,8 @@ a { color: inherit; text-decoration: none; }
   cursor: pointer;
   transition: all 0.2s ease;
 }
-.genre-pill:hover { border-color: var(--border-glow); color: var(--ink); }
-.genre-pill.is-active {
+.company-pill:hover { border-color: var(--border-glow); color: var(--ink); }
+.company-pill.is-active {
   background: linear-gradient(135deg, rgba(143,172,255,0.22), rgba(143,172,255,0.05));
   border-color: var(--border-glow-strong);
   color: var(--aurora);

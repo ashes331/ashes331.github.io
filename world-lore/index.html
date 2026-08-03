@@ -55,7 +55,7 @@
   <div class="archive-toolbar">
     <div class="ornate-divider"><span class="line"></span><span class="glyph">◆</span><span class="line"></span></div>
     <div class="archive-stats" id="archiveStats"></div>
-    <div class="genre-filter" id="genreFilter"></div>
+    <div class="company-filter" id="companyFilter"></div>
   </div>
 
   <main class="archive-grid" id="archiveGrid"></main>
@@ -66,12 +66,12 @@
   <script>
     const grid = document.getElementById('archiveGrid');
     const statsWrap = document.getElementById('archiveStats');
-    const filterWrap = document.getElementById('genreFilter');
+    const filterWrap = document.getElementById('companyFilter');
 
     function renderCards(list) {
       grid.innerHTML = '';
       if (!list.length) {
-        grid.innerHTML = '<div class="empty-state">해당 장르의 파일이 없습니다.</div>';
+        grid.innerHTML = '<div class="empty-state">해당 회사의 파일이 없습니다.</div>';
         return;
       }
       list.forEach((game, index) => {
@@ -85,7 +85,10 @@
           <div class="card-inner" style="--accent:${game.accentColor || ''}">
             <div class="file-number">FILE NO. ${game.fileNumber || String(index + 1).padStart(3, '0')}</div>
             <h2>${game.title}</h2>
-            <span class="genre-tag">${game.genre || ''}</span>
+            <div class="card-tags-row">
+              ${game.company ? `<span class="company-tag">${game.company}</span>` : ''}
+              <span class="genre-tag">${game.genre || ''}</span>
+            </div>
             <p class="hook">${game.hook || ''}</p>
             <span class="open-link">파일 열람 →</span>
           </div>
@@ -104,22 +107,18 @@
         <span><strong>${gamesData.length}</strong>건의 파일 보관 중</span>
       `;
 
-      // 장르 태그 추출 (·로 구분된 각 게임의 genre 문자열을 분리해 고유값만 모음)
-      const genreSet = new Set();
-      gamesData.forEach(g => {
-        (g.genre || '').split('·').map(t => t.trim()).filter(Boolean).forEach(t => genreSet.add(t));
-      });
-
-      const genres = ['전체', ...Array.from(genreSet)];
+      // 회사별 필터 — 고정된 3개 회사 + 전체
+      const COMPANIES = ['호요버스', '쿠로게임즈', '프로젝트문'];
+      const companies = ['전체', ...COMPANIES];
       let active = '전체';
 
       function renderFilterBar() {
-        filterWrap.innerHTML = genres.map(g =>
-          `<button class="genre-pill${g === active ? ' is-active' : ''}" data-genre="${g}">${g}</button>`
+        filterWrap.innerHTML = companies.map(c =>
+          `<button class="company-pill${c === active ? ' is-active' : ''}" data-company="${c}">${c}</button>`
         ).join('');
-        filterWrap.querySelectorAll('.genre-pill').forEach(btn => {
+        filterWrap.querySelectorAll('.company-pill').forEach(btn => {
           btn.addEventListener('click', () => {
-            active = btn.dataset.genre;
+            active = btn.dataset.company;
             renderFilterBar();
             applyFilter();
           });
@@ -129,7 +128,7 @@
       function applyFilter() {
         const filtered = active === '전체'
           ? gamesData
-          : gamesData.filter(g => (g.genre || '').includes(active));
+          : gamesData.filter(g => g.company === active);
         renderCards(filtered);
       }
 
