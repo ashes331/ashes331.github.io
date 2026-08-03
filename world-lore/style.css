@@ -39,6 +39,55 @@ html, body {
 
 a { color: inherit; text-decoration: none; }
 
+/* ---------- 배경 레이어 ---------- */
+.bg-mesh {
+  position: fixed;
+  inset: 0;
+  z-index: -3;
+  background:
+    radial-gradient(ellipse 900px 600px at 15% 10%, rgba(155, 140, 246, 0.18), transparent 60%),
+    radial-gradient(ellipse 800px 700px at 85% 25%, rgba(143, 172, 255, 0.16), transparent 55%),
+    radial-gradient(ellipse 1000px 800px at 50% 100%, rgba(94, 232, 212, 0.12), transparent 60%),
+    var(--void);
+}
+
+.orb {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: -2;
+  opacity: 0.6;
+  pointer-events: none;
+  transition: transform 0.3s ease-out;
+}
+.orb-1 { width: 380px; height: 380px; top: -100px; left: -80px; background: var(--violet); }
+.orb-2 { width: 320px; height: 320px; top: 40%; right: -100px; background: var(--aurora); }
+.orb-3 { width: 300px; height: 300px; bottom: -120px; left: 30%; background: var(--teal); }
+
+.orb-1 { animation: float-1 22s ease-in-out infinite; }
+.orb-2 { animation: float-2 26s ease-in-out infinite; }
+.orb-3 { animation: float-3 19s ease-in-out infinite; }
+
+@keyframes float-1 {
+  0%, 100% { margin-left: 0; margin-top: 0; }
+  50% { margin-left: 60px; margin-top: 40px; }
+}
+@keyframes float-2 {
+  0%, 100% { margin-left: 0; margin-top: 0; }
+  50% { margin-left: -50px; margin-top: 60px; }
+}
+@keyframes float-3 {
+  0%, 100% { margin-left: 0; margin-top: 0; }
+  50% { margin-left: 40px; margin-top: -50px; }
+}
+
+#bg-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
 /* ---------- 공통 헤더 ---------- */
 .site-header {
   padding: 56px 24px 28px;
@@ -390,6 +439,7 @@ a { color: inherit; text-decoration: none; }
     border-radius: 0;
   }
   .tab-nav button { white-space: nowrap; }
+  .orb { display: none; }
 }
 
 /* ══════════════════════════════
