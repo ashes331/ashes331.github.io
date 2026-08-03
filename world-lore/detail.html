@@ -8,11 +8,18 @@
 </head>
 <body>
 
+  <div class="bg-mesh"></div>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+  <canvas id="bg-canvas"></canvas>
+
   <div class="detail-shell" id="shell">
     <a href="index.html" class="back-link">← 아카이브로 돌아가기</a>
   </div>
 
   <script src="data.js"></script>
+  <script src="effects.js"></script>
   <script>
     const params = new URLSearchParams(location.search);
     const id = params.get('id');
