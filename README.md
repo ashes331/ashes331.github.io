@@ -25,6 +25,7 @@ ML/DL, NLP, 알고리즘을 공부하며 직접 만들고 실험한 프로젝트
 | 🎮 Special Playground | 게임, 도구, 알고리즘 시각화 모음집 | [바로가기](https://ashes331.github.io/Special-Playground/) |
 | 🪐 Solar Explorer | 태양계 시각화 시뮬레이션 | [바로가기](https://ashes331.github.io/solar-explorer/index.html) |
 | 📚 World Lore Archive | 플레이한 서브컬쳐 게임들의 세계관 정리 아카이브 | [바로가기](https://ashes331.github.io/world-lore/) |
+| ㅁ | ㅁ | [바로가기](제작중) |
 
 ---
 
