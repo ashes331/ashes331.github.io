@@ -5,11 +5,11 @@
 ══════════════════════════════ */
 const projects = [
   {
-    emoji: "🎮",
-    title: "Special Playground",
-    desc: "게임, 도구, 알고리즘 시각화까지 — 직접 만들고 실험하는 인터랙티브 프로젝트 모음집. Tetris, Neural Network Playground, Pathfinding Visualizer, RL Playground 등 다수 포함.",
-    tags: ["Vanilla JS", "Canvas API", "ML / RL", "Games", "Tools"],
-    link: "https://ashes331.github.io/Special-Playground/",
+    emoji: "🧱",
+    title: "Tetris",
+    desc: "바닐라 Canvas로 구현한 클래식 테트리스. 7-bag 랜덤, 고스트 블록, SRS 회전, T-Spin 판정, 콤보 · Back-to-Back 점수 시스템까지 정식 가이드라인을 재현했습니다.",
+    tags: ["Vanilla JS", "Canvas API", "Game Dev"],
+    link: "./tetris/index.html",
     featured: true
   },
   {

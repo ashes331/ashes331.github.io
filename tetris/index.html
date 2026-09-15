@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TETRIS</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <canvas id="bg-canvas"></canvas>
+  <div class="wrapper">
+    <aside class="sidebar left">
+      <div class="panel">
+        <div class="label">NEXT</div>
+        <canvas id="next-canvas" width="144" height="144"></canvas>
+      </div>
+      <div class="panel">
+        <div class="label">HOLD</div>
+        <canvas id="hold-canvas" width="144" height="144"></canvas>
+      </div>
+    </aside>
+
+    <main class="game-area">
+      <div class="screen-frame">
+        <canvas id="game-canvas" width="360" height="720"></canvas>
+
+        <!-- 콤보 / 스페셜 알림 -->
+        <div id="notice"></div>
+
+        <!-- 시작 / 게임오버 오버레이 -->
+        <div id="overlay" class="overlay">
+          <div class="overlay-content">
+            <div class="big-title">TETRIS</div>
+            <div id="overlay-msg" class="overlay-msg">PRESS SPACE</div>
+            <div id="final-score" class="final-score"></div>
+          </div>
+        </div>
+
+        <!-- ESC 메뉴 -->
+        <div id="pause-menu" class="pause-menu hidden">
+          <div class="pause-content">
+            <div class="pause-title">PAUSED</div>
+            <button id="btn-resume"  class="menu-btn">▶ RESUME</button>
+            <button id="btn-restart" class="menu-btn">↺ RESTART</button>
+            <button id="btn-quit"    class="menu-btn quit">✕ QUIT</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <aside class="sidebar right">
+      <div class="panel">
+        <div class="label">SCORE</div>
+        <div id="score" class="value">0</div>
+      </div>
+      <div class="panel">
+        <div class="label">LINES</div>
+        <div id="lines" class="value">0</div>
+      </div>
+      <div class="panel">
+        <div class="label">LEVEL</div>
+        <div id="level" class="value">1</div>
+      </div>
+      <div class="panel">
+        <div class="label">COMBO</div>
+        <div id="combo" class="value">-</div>
+      </div>
+      <div class="panel controls">
+        <div class="label">CONTROLS</div>
+        <div class="key-row"><kbd>←→</kbd> Move</div>
+        <div class="key-row"><kbd>↑</kbd> Rotate</div>
+        <div class="key-row"><kbd>↓</kbd> Soft Drop</div>
+        <div class="key-row"><kbd>Space</kbd> Hard Drop</div>
+        <div class="key-row"><kbd>C</kbd> Hold</div>
+        <div class="key-row"><kbd>ESC</kbd> Menu</div>
+      </div>
+    </aside>
+  </div>
+
+  <script src="js/background.js"></script>
+  <script src="js/tetris.js"></script>
+</body>
+</html>
