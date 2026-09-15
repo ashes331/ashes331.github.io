@@ -81,9 +81,9 @@ function applyTheme(theme) {
     themeLabel.textContent = '라이트 모드';
     mobileThemeBtn.textContent = '☀️';
   } else {
-    themeIcon.textContent  = '☀️';
+    themeIcon.textContent  = '🌙';
     themeLabel.textContent = '다크 모드';
-    mobileThemeBtn.textContent = '☀️';
+    mobileThemeBtn.textContent = '🌙';
   }
 }
 
