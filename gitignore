@@ -1,0 +1,18 @@
+# 로컬 테스트용 브라우저 프로필 (Chrome/Chromium 등)이 실수로 커밋되는 것 방지
+chrome_profile/
+**/chrome_profile/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 에디터
+.vscode/
+.idea/
+
+# 로컬 환경 변수 (Vercel 등에서 로컬 테스트 시 생성될 수 있음)
+.env
+.env.local
+
+# 로그
+*.log
