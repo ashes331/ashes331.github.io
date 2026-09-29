@@ -5,11 +5,21 @@
   const overlay = document.getElementById('introOverlay');
   if (!overlay) return;
 
+  const HIDE_KEY = 'worldLoreIntroHideUntil';
+
+  // 저장된 "숨김 만료 시각"이 아직 안 지났으면 모달 자체를 띄우지 않음
+  const hideUntil = Number(localStorage.getItem(HIDE_KEY) || 0);
+  if (Date.now() < hideUntil) {
+    overlay.style.display = 'none';
+    return;
+  }
+
   const slides = Array.from(document.querySelectorAll('.intro-slide'));
   const dotsWrap = document.getElementById('introDots');
   const prevBtn = document.getElementById('introPrev');
   const nextBtn = document.getElementById('introNext');
   const skipBtn = document.getElementById('introSkip');
+  const rememberCheckbox = document.getElementById('introRemember');
 
   let step = 0;
   const total = slides.length;
@@ -30,6 +40,9 @@
   }
 
   function close() {
+    if (rememberCheckbox && rememberCheckbox.checked) {
+      localStorage.setItem(HIDE_KEY, String(Date.now() + 24 * 60 * 60 * 1000));
+    }
     overlay.classList.add('is-hidden');
     document.body.style.overflow = '';
     setTimeout(() => { overlay.style.display = 'none'; }, 500);
