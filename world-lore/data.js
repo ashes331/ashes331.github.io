@@ -13,6 +13,8 @@
   - company      : 개발사 구분용. "호요버스" / "쿠로게임즈" / "프로젝트문" 중 하나를 넣으면
                    목록 페이지 상단 필터 탭에서 해당 회사로 걸러볼 수 있습니다.
   - genre        : 장르/태그 (카드에 짧게 표시됨)
+  - featured     : true로 설정하면 목록 페이지에서 큰 대표 카드로 표시됩니다.
+                   여러 개를 true로 둬도 되지만, 보통 1~2개만 추천합니다.
   - fileNumber   : 파일 번호처럼 표시될 문자열 (3자리 숫자 추천, 순서는 자유)
   - hook         : 목록 카드에 보일 한 줄 소개 (후킹 문구, 20자 내외 추천)
   - accentColor  : 이 게임 전용 포인트 색상 (hex). 비워두면 기본 골드색 사용
@@ -33,6 +35,7 @@ const gamesData = [
     title: "황혼의 방주",
     company: "프로젝트문",
     genre: "SF · 재난 · 다크판타지",
+    featured: true,
     fileNumber: "001",
     hook: "가라앉는 세계에서 마지막 배를 지키는 이야기",
     accentColor: "#a6432f",
@@ -69,6 +72,7 @@ const gamesData = [
   //   title: "...",
   //   company: "호요버스",
   //   genre: "...",
+  //   featured: false,
   //   fileNumber: "002",
   //   hook: "...",
   //   accentColor: "#5c6f5d",

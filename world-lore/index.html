@@ -8,12 +8,6 @@
 </head>
 <body>
 
-  <div class="bg-mesh"></div>
-  <div class="orb orb-1"></div>
-  <div class="orb orb-2"></div>
-  <div class="orb orb-3"></div>
-  <canvas id="bg-canvas"></canvas>
-
   <div class="intro-overlay" id="introOverlay">
     <div class="intro-modal">
       <button class="intro-skip" id="introSkip">건너뛰기</button>
@@ -47,25 +41,25 @@
   </div>
 
   <header class="site-header">
-    <div class="eyebrow">WORLD ARCHIVE</div>
-    <h1>세계관 아카이브</h1>
-    <div class="sub">플레이한 서브컬쳐 게임들의 세계관을 파일로 정리했습니다.</div>
+    <div class="title-block">
+      <div class="eyebrow">WORLD ARCHIVE</div>
+      <h1>세계관 아카이브</h1>
+      <div class="sub">플레이한 서브컬쳐 게임들의 세계관을 파일로 정리했습니다.</div>
+    </div>
+    <div class="header-stats" id="headerStats"></div>
   </header>
 
   <div class="archive-toolbar">
-    <div class="ornate-divider"><span class="line"></span><span class="glyph">◆</span><span class="line"></span></div>
-    <div class="archive-stats" id="archiveStats"></div>
     <div class="company-filter" id="companyFilter"></div>
   </div>
 
   <main class="archive-grid" id="archiveGrid"></main>
 
   <script src="data.js"></script>
-  <script src="stars-bg.js"></script>
   <script src="intro.js"></script>
   <script>
     const grid = document.getElementById('archiveGrid');
-    const statsWrap = document.getElementById('archiveStats');
+    const statsWrap = document.getElementById('headerStats');
     const filterWrap = document.getElementById('companyFilter');
 
     function renderCards(list) {
@@ -75,24 +69,39 @@
         return;
       }
       list.forEach((game, index) => {
-        const tilt = (index % 2 === 0 ? -1 : 1) * (1 + (index % 3));
+        const isFeatured = !!game.featured;
         const card = document.createElement('a');
         card.href = `detail.html?id=${encodeURIComponent(game.id)}`;
-        card.className = 'file-card';
-        card.style.setProperty('--tilt', `${tilt}deg`);
+        card.className = 'file-card' + (isFeatured ? ' featured' : '');
 
-        card.innerHTML = `
-          <div class="card-inner" style="--accent:${game.accentColor || ''}">
-            <div class="file-number">FILE NO. ${game.fileNumber || String(index + 1).padStart(3, '0')}</div>
-            <h2>${game.title}</h2>
-            <div class="card-tags-row">
-              ${game.company ? `<span class="company-tag">${game.company}</span>` : ''}
-              <span class="genre-tag">${game.genre || ''}</span>
+        const tagsHtml = `
+          ${game.company ? `<span class="company-tag">${game.company}</span>` : ''}
+          <span class="genre-tag">${game.genre || ''}</span>
+        `;
+
+        if (isFeatured) {
+          card.innerHTML = `
+            <div class="featured-visual"><span>key visual</span></div>
+            <div class="card-body">
+              <div class="file-number-row">
+                <span class="file-number">FILE NO. ${game.fileNumber || String(index + 1).padStart(3, '0')}</span>
+                <span class="pick-badge">PICK</span>
+              </div>
+              <h2>${game.title}</h2>
+              <div class="card-tags-row">${tagsHtml}</div>
+              <p class="hook">${game.hook || ''}</p>
+              <span class="open-link">파일 열람 →</span>
             </div>
+          `;
+        } else {
+          card.innerHTML = `
+            <span class="file-number">FILE NO. ${game.fileNumber || String(index + 1).padStart(3, '0')}</span>
+            <h2>${game.title}</h2>
+            <div class="card-tags-row">${tagsHtml}</div>
             <p class="hook">${game.hook || ''}</p>
             <span class="open-link">파일 열람 →</span>
-          </div>
-        `;
+          `;
+        }
         grid.appendChild(card);
       });
     }
@@ -102,9 +111,12 @@
       filterWrap.style.display = 'none';
       grid.innerHTML = '<div class="empty-state">아직 등록된 파일이 없습니다. data.js에 게임을 추가해보세요.</div>';
     } else {
-      // 통계 표시
+      // 통계 표시 (전체 파일 수 · 등록된 장르 수)
+      const genreCount = new Set();
+      gamesData.forEach(g => (g.genre || '').split('·').map(t => t.trim()).filter(Boolean).forEach(t => genreCount.add(t)));
       statsWrap.innerHTML = `
-        <span><strong>${gamesData.length}</strong>건의 파일 보관 중</span>
+        <div class="stat"><span class="num">${gamesData.length}</span><span class="label">FILES</span></div>
+        <div class="stat"><span class="num">${genreCount.size}</span><span class="label">GENRES</span></div>
       `;
 
       // 회사별 필터 — 고정된 3개 회사 + 전체
